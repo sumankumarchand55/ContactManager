@@ -1,0 +1,35 @@
+.about-section {
+    padding: 10px;
+    background-color: #e3e3e3 ; 
+    border-radius: 8px;       
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+     width: 55%; 
+}
+
+.about-title {
+    font-size: 1rem;        
+    letter-spacing: 1px;     
+}
+
+.about-text {
+    font-size: 0.85rem;       
+    max-width: 400px;         
+    white-space: normal;       
+    word-wrap: break-word;   
+    color: #6c757d;           
+}
+
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 0.75rem;   
+        text-align: center;   
+    }
+    
+    .about-section {
+    padding: 10px;
+    background-color: #e3e3e3 ; 
+    border-radius: 8px;       
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+     width: 85%; 
+}
+}

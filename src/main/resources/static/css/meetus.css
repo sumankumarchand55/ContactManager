@@ -1,0 +1,75 @@
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.column {
+	flex: 1;
+	max-width: 300px;
+	margin: 0 10px;
+}
+
+.card {
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-10px);
+}
+
+.card img {
+	width: 100%;
+	border-bottom: 3px solid #f1f1f1;
+}
+
+.container {
+	padding: 20px;
+	text-align: center;
+}
+
+.card h2 {
+	font-size: 1.5rem;
+	margin: 10px 0;
+	color: #333;
+}
+
+.card .title {
+	font-size: 1rem;
+	color: #888;
+	margin-bottom: 20px;
+}
+
+.button {
+	background-color: #007BFF;
+	border: none;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 1rem;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+	.column {
+		flex: 1 1 45%; /* Two cards per row */
+		max-width: 45%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.column {
+		flex: 1 1 100%; /* Single card per row on mobile */
+		max-width: 100%;
+	}
+}

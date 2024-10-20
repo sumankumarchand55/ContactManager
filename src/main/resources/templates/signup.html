@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>SingUp-ContactManager</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+</head>
+<style>
+.mybody {
+	background-image: url('img/signupbg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+@media ( max-width : 767px) {
+	.vertical-links {
+		display: block;
+	}
+	.vertical-links img {
+		max-height: 100px;
+	}
+}
+.custom-alert-left {
+    margin-left: -15px; /* Adjust this value to move the alert more or less to the left */
+}
+
+</style>
+
+<body>
+	<!-- replacement of navigation bar from fragment constant-->
+	<div th:replace="~{/fragments/navigationbar :: navigationbar}"></div>
+
+	<div data-th-replace="~{/fragments/afterlogin/spinner :: spinner}"></div>
+
+	<section class="mybody">
+		<div class="container" style="margin-top: -18px;">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-md-6 custom-container rounded ">
+					<div class="my-card mt-4 signuphover rounded top custom-card">
+						<!-- Display flash message -->
+						<div th:if="${message}" th:classappend="${message.type}"
+							class="alert alert-dismissible">
+							<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+							<h5 class="text-center" th:text="${message.content}"></h5>
+						</div>
+
+
+						<div class="container ">
+							<label></label>
+							<div class="row justify-content-center mb-2"
+								style="margin-top: -30px;">
+								<div class="col-12">
+									<div
+										class="logo-container d-flex justify-content-center align-items-center">
+										<a class="text-success"
+											href="https://suman-ojbp.onrender.com/students"> <img
+											src="/img/home/contactlogo.png" alt="Logo"
+											style="width: 40px; margin-right: -8px;" class="fw-bold">
+										</a>
+										<h4 class="fw-bold mb-0 ms-2">
+											<span class="text-blue">Contact</span><span class="text-red">Manager</span>
+										</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+						<div class="container text-center">
+							<img style="width: 40px" alt="" th:src="@{/img/registration.png}">
+						</div>
+						<h3 class="text-center text-service fw-bold">Create Your
+							Account</h3>
+
+
+						<form th:action="@{/do_register}" method="post"
+							th:object="${user}" onsubmit="validateForm(event)">
+
+							<!-- Name Field  -->
+							<div class="form-group">
+								<label for="name_field" class="form-label fw-bold">Enter
+									Your Name*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i class="fas fa-user"></i></span>
+									<input type="text" th:field="*{name}" class="form-control"
+										th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}"
+										id="name_field" aria-describedby="nameHelp"
+										placeholder="Name!!!" autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('name')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="phone_number_field" class="form-label fw-bold">Enter
+									Your Phone Number*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i class="fas fa-phone"></i></span>
+									<input type="text" th:field="*{phoneNumber}"
+										class="form-control"
+										th:classappend="${#fields.hasErrors('phoneNumber') ? 'is-invalid' : ''}"
+										id="phone_number_field" aria-describedby="nameHelp"
+										placeholder="Phone Number!!!" autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('phoneNumber')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+
+							<!-- Email Field  -->
+							<div class="from-group">
+								<label for="email_field" class="form-label fw-bold">Enter
+									Your Email*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i
+										class="fas fa-envelope"></i></span> <input type="email" name="email"
+										class="form-control"
+										th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}"
+										id="email_field" aria-describedby="emailHelp"
+										placeholder="contact@sumanisowner.com"
+										th:value="${user.email}" autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('email')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="password_field" class="form-label fw-bold">Enter
+									Password*</label>
+								<div class="input-group">
+									<span class="input-group-text"> <i class="fas fa-lock"></i></span>
+									<input type="password" name="password" class="form-control"
+										th:classappend="${#fields.hasErrors('password') ? 'is-invalid' : ''}"
+										id="password_field" aria-describedby="passwordHelp"
+										placeholder="Password!!!" required />
+									<button class="btn bg-secondary" type="button"
+										id="togglePassword">
+										<i class="fas fa-eye"></i>
+									</button>
+								</div>
+								<div class="invalid-feedback"
+									th:each="e : ${#fields.errors('password')}" th:text="${e}"></div>
+							</div>
+
+							<!-- Add Confirm Password Field -->
+							<div class="form-group mt-2">
+								<label for="confirm_password_field" class="form-label fw-bold">Confirm
+									Password*</label>
+								<div class="input-group">
+									<span class="input-group-text"> <i class="fas fa-lock"></i></span>
+									<input type="password" name="confirmPassword"
+										class="form-control" id="confirm_password_field"
+										placeholder="Confirm Password!!!" required />
+								</div>
+							</div>
+
+							<!-- User About Field  -->
+							<div class="form-group">
+								<label class="form-label fw-bold">Description*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i
+										class="fas fa-file-text"></i></span>
+									<textarea th:text="${user.about}" name="about"
+										placeholder="Enter Something About Your Self" rows="2"
+										class="form-control"
+										th:classappend="${#fields.hasErrors('about') ? 'is-invalid' : ''}">
+                                   </textarea>
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('about')}" th:text="${e}"></div>
+								</div>
+							</div>
+							<label></label>
+
+							<div class="form-group text-center">
+								<div class="form-check d-inline-block">
+									<input type="checkbox" name="agreed" class="form-check-input"
+										th:classappend="${#fields.hasErrors('agreed') ? 'is-invalid' : ''}"
+										id="agreed" /> <label for="agreed" class="form-check-label">Accept
+										Terms And Conditions</label> <span class="text-danger ms-2"
+										th:if="${#fields.hasErrors('agreed')}"
+										th:text="${#fields.errors('agreed')[0]}"></span>
+								</div>
+							</div>
+							<div class="container text-center mt-2">
+
+								<button type="submit" class="btn mybtn btn-primary">
+									Submit</button>
+
+								<button type="reset" class="btn btn-danger">Reset</button>
+							</div>
+						</form>
+						<h2 class="text-center fw-bold text-dark">OR</h2>
+
+						<div class="social-buttons-container flex text-center mt-1">
+							<a href="oauth2/authorization/google"
+								class="login-with-google-btn fw-bold footer-link2"> Sign up
+								with Google </a>
+						</div>
+
+						<div class="text-center mt-4 fw-bold">
+							Already have a account? <a class="footer-link1"
+								th:href="@{/user/profile}" onclick="submitForm()"> Sign in</a>
+						</div>
+						<div class="text-center fw-bold">
+							OR Return <a class="footer-link1" th:href="@{/}">Home</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script th:src="@{/js/script.js}"></script>
+<script>
+function validateForm(event) {
+    var password = document.getElementById('password_field').value;
+    var confirmPassword = document.getElementById('confirm_password_field').value;
+
+    if (password.length < 8) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Too short!!',
+            text: 'Password must be at least 8 characters long!',
+            width: '300px',
+            position: 'top', 
+            customClass: {
+                popup: 'custom-alert-left' 
+            }
+        });
+        event.preventDefault(); 
+        return false;
+    }
+
+    if (password !== confirmPassword) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Mismatched!!',
+            text: 'Password and confirm password must match!!!!',
+            width: '300px',
+            position: 'top', 
+            customClass: {
+                popup: 'custom-alert-left'
+                
+            }
+        });
+        event.preventDefault();
+        return false;
+    }
+
+    submitForm();
+    return true;
+}
+
+	function submitForm() {
+		$('#loadingSpinner').show();
+	}
+
+	function showSpinner() {
+		$('#loadingSpinner').show();
+	}
+
+	function hideSpinner() {
+		$('#loadingSpinner').hide();
+	}
+
+	window.addEventListener('beforeunload', showSpinner);
+	window.addEventListener('load', hideSpinner);
+	
+</script>
+</html>

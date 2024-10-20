@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+th:replace="~{base::layout(~{::section}, ~{::title})}">
+<head>
+<meta charset="UTF-8">
+<title>Home-ContactManager</title>
+</head>
+<body>
+<section class="banner d-flex justify-content-center align-items-center">
+   <div class="text-center">
+        <h1 class="fw-bold">Contact Manager</h1>
+        <p class="fw-bold"> Start Collecting Your Contacts In a Very Smarter Way.
+            We provide Very Efficient And Smarter Way To Handling Contacts.
+       </p>
+       <a class="btn mybtn btn-lg fw-bold" th:href="@{/signup}" type="button">Get Start</a>
+   </div>
+    
+</section>
+
+</body>
+</html>

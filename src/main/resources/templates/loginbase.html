@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content, pageTitle)">
+
+<head>
+<title th:replace="${pageTitle}">Default Title</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link th:href="@{/css/login.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/homeall.css}" rel="stylesheet">
+<meta charset="UTF-8">
+</head>
+<body>
+
+        <div data-th-replace="~{/fragments/afterlogin/change_password :: change_password}"></div>
+         <div data-th-replace="~{/fragments/afterlogin/google_change_password :: google_change_password}"></div>
+ 
+   <div data-th-replace="~{/fragments/afterlogin/spinner :: spinner}"></div>
+
+<div th:replace="~{/fragments/afterlogin/login-navbar :: navigationbar}"></div>
+
+ <div class="d-flex flex-column flex-lg-row">
+    <div class="sidebar-container d-lg-block" th:replace="~{/fragments/afterlogin/sidebar :: sidebar}"></div>
+    <div class="content-area flex-grow-1 p-3">
+        <!-- Content for all screen sizes -->
+        <div th:replace="${content}"></div>
+    </div>
+</div>
+    
+      <div th:replace="~{/fragments/footer :: footer}"></div>
+    
+</body>
+
+<script>
+
+function showSpinner() {
+	$('#loadingSpinner').show(); 
+}
+function hideSpinner() {
+	$('#loadingSpinner').hide();
+}
+window.addEventListener('beforeunload', showSpinner);
+window.addEventListener('load', hideSpinner);
+
+</script>
+
+<script th:src="@{/js/script.js}"></script>
+<script th:src="@{/js/login.js}"></script>
+</html>

@@ -1,0 +1,152 @@
+<div data-th-fragment="navigationbar">
+
+	<style>
+@media ( max-width : 768px) {
+	.logo-image {
+		width: 40px;
+		margin-left: 20px;
+		margin-right: -15px;
+	}
+}
+
+@media ( min-width : 769px) {
+	.logo-image {
+		width: 50px;
+		margin-left: 30px;
+		margin-right: 0px;
+	}
+}
+</style>
+	<!-- Horizontal upper Navbar start -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container-fluid">
+			<!-- Second Button (Sidebar Toggle) -->
+			<div class="d-flex justify-content-start">
+				<button class="btn btn d-lg-none" id="sidebarToggle" type="button"
+					style="margin-top: -5px; margin-left: -50px;">
+					<span class="navbar-toggler-icon fixed-top fw-bold"
+						style="margin-top: 20px; margin-left: 8px;"></span>
+				</button>
+			</div>
+			<h4>
+				<a class="navbar-brand text-success mx-auto"
+					data-th-href="@{/user/profile}"> <img
+					src="/img/home/contactlogo.png" alt="Logo"
+					class="logo-image fw-bold">
+				</a>
+			</h4>
+
+
+			<h4 class="fw-bold mx-auto">
+				<span class="text-blue">Contact</span><span class="text-red">Manager</span>
+			</h4>
+
+			<div class=" dropdown d-flex gap-1 ms-auto d-lg-none">
+				<button class="btn btn-link p-0" id="profileDropdown"
+					data-bs-toggle="dropdown">
+					<img id="profileImage" data-th-src="@{${logedInUser.imageUrl}}"
+						alt="/img/contact.png" class="profile-icon"
+						onerror="this.src=this.alt;"
+						style="margin-top: 0px; margin-right: -10px;">
+				</button>
+
+				<!-- Dropdown Menu -->
+				<div class="">
+					<ul class="dropdown-menu dropdown-menu-end body text-white"
+						aria-labelledby="profileDropdown">
+						<li class="dropdown-item body text-white text-center"><img
+							id="profileImage" data-th-src="@{${logedInUser.imageUrl}}"
+							alt="/img/contact.png" class="rounded-circle mb-2"
+							style="width: 100px; height: 100px; border: 2px solid white;" 	onerror="this.src=this.alt;">
+							<h6 data-th-text="${logedInUser.name}" class="text-dark fw-bold mb-0"></h6>
+							<p class="text-muted fw-bold mb-0" data-th-text="${logedInUser.email}"></p></li>
+						<li><hr class="dropdown-divider bg-light"></li>
+						<li class="dropdown-item body text-white text-center"><a
+							data-th-href="@{/user/profile}"
+							class="btn btn-primary rounded">View Profile</a> <a
+							data-th-href="@{/logout}" class="btn btn-danger rounded">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+			<button class="navbar-toggler btn-primary ms-auto d-lg-none"
+				id="navbarToggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#collapsibleNavbar"
+				aria-controls="collapsibleNavbar" aria-expanded="false"
+				aria-label="Toggle navigation"
+				style="margin-top: 0px; margin-right: 5px;">
+				<span class="fas fa-angle-down down"></span>
+			</button>
+
+
+
+			<div class="collapse navbar-collapse justify-content-center"
+				id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<h4>
+							<a class="nav-link fw-bold fs-5 text-light link-dark"
+								data-th-href="@{/}">Home</a>
+						</h4>
+					</li>
+					<li class="nav-item">
+						<h4>
+							<a class="nav-link fw-bold fs-5 text-light link-dark"
+								data-th-href="@{/about}">About</a>
+						</h4>
+					</li>
+					<li class="nav-item">
+						<h4>
+							<a class="nav-link fw-bold fs-5 text-light link-dark"
+								data-th-href="@{/service}">Services</a>
+						</h4>
+					</li>
+					<li class="nav-item">
+						<h4>
+							<a class="nav-link fw-bold fs-5 text-light link-dark"
+								data-th-href="@{/contact}">Contact</a>
+						</h4>
+					</li>
+					<li class="nav-item">
+						<h4>
+							<a class="nav-link fw-bold fs-5 text-light link-dark"
+								data-th-href="@{/meetus}" style="margin-right: 0px;">Meet Us</a>
+						</h4>
+					</li>
+				</ul>
+			</div>
+			<!-- Image with Dropdown Trigger -->
+			<div class="dropdown dropstart d-flex gap-1 mx-auto d-none d-lg-flex">
+				<button class="btn btn-link p-0" id="profileDropdown"
+					data-bs-toggle="dropdown">
+					<img id="profileImage" data-th-src="@{${logedInUser.imageUrl}}"
+						alt="/img/contact.png" class="profile-icon"
+						onerror="this.src=this.alt;">
+				</button>
+
+				<div class="">
+					<ul class="dropdown-menu dropdown-menu-end body text-white"
+						aria-labelledby="profileDropdown">
+						<li class="dropdown-item body text-white text-center"><img
+							id="profileImage" data-th-src="@{${logedInUser.imageUrl}}"
+							alt="/img/contact.png" class="rounded-circle mb-2"
+							style="width: 100px; height: 100px; border: 2px solid white;" onerror="this.src=this.alt;">
+							<h6 data-th-text="${logedInUser.name}" class="text-dark fw-bold mb-0"></h6>
+							<p class="text-muted fw-bold mb-0" data-th-text="${logedInUser.email}"></p></li>
+						<li><hr class="dropdown-divider bg-light"></li>
+						<li class="dropdown-item body text-white text-center"><a
+							data-th-href="@{/user/profile}"
+							class="btn btn-outline-primary rounded"> <i	class="fas fa-home"></i> View Profile</a> <a
+							data-th-href="@{/logout}" class="btn btn-outline-danger rounded"><i class="fas fa-power-off"></i> Logout</a></li>
+					</ul>
+				</div>
+				<a data-bs-toggle="dropdown"
+					class="btn nav-link text-light fw-bold p-0"
+					style="margin-top: 15px; margin-right: 20px;">
+					<h6 data-th-text="${logedInUser.name}" class="fw-bold m-0"></h6>
+				</a>
+
+			</div>
+		</div>
+	</nav>
+
+</div>

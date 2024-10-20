@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section}, ~{::title})}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ContactUs-ContactManager</title>
+<link rel="stylesheet" href="styles.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"
+	crossorigin="anonymous"></script>
+</head>
+<body>
+	<section class="contact-container body bodycontact">
+		<div class="contact-header">
+			<h1 class="fw-bold text-service">Contact Us</h1>
+			<p>Have questions or need support? We're here to help with
+				anything related to Smart Contact Manager.</p>
+		</div>
+
+		<div class="contact-content">
+			<div class="contact-info">
+				<h2>Contact Info:</h2>
+				<p>
+					<i class="fas fa-user text-primary me-1"></i>Developer & Owner:
+					SUMAN KUMAR CHAND
+				</p>
+				<p>
+					<i class="fas fa-envelope text-danger me-1"></i><a
+						href="mailto:contactmanagerfun@gmail.com">
+						contactmanager@gmail.com</a>
+				</p>
+				<p>
+					<i class="fas fa-phone text-success me-1"></i><a
+						href="tel:+917682855932">+91 7682855932</a>
+				</p>
+
+				<div class="social-links">
+					<h3>Connect with SUMAN</h3>
+					<a href="https://linkedin.com/in/sumankchand" target="_blank"><i
+						class="fab fa-linkedin me-4 ms-4"></i></a> <a
+						href="https://github.com/hrypter/Contact_Management"
+						target="_blank"><i class="fab fa-github me-4 text-dark"></i></a> <a
+						href="https://www.facebook.com/share/y3i4CSZ8DsNU9vSs"><i
+						class="fab fa-facebook text-primary me-1"></i></a>
+				</div>
+			</div>
+
+			<div class="contact-form">
+				<h2>Send Us a Message</h2>
+
+				<form th:action="@{/contact}" th:object="${message}" method="post">
+
+					<!-- Name Field  -->
+					<div class="form-group">
+						<label for="name_field" class="form-label fw-bold">Enter
+							Your Name*</label>
+						<div class="input-group">
+							<span class="input-group-text"> <i class="fas fa-user"></i></span>
+							<input type="text" th:field="*{name}" class="form-control"
+								th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}"
+								id="name_field" aria-describedby="nameHelp"
+								placeholder="Name!!!" autocomplete="off" />
+							<div class="invalid-feedback"
+								th:each="e : ${#fields.errors('name')}" th:text="${e}"></div>
+						</div>
+					</div>
+
+
+					<div class="from-group">
+						<label for="email_field" class="form-label fw-bold">Enter
+							Your Email*</label>
+						<div class="input-group">
+							<span class="input-group-text"> <i class="fas fa-envelope"></i></span>
+							<input type="email" th:field="*{email}" class="form-control"
+								th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}"
+								id="emailmessage" aria-describedby="emailHelp"
+								placeholder="contact@sumanisowner.com" autocomplete="off" />
+
+							<div class="invalid-feedback"
+								th:each="e : ${#fields.errors('email')}" th:text="${e}"></div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label for="content" class="form-label fw-bold mt-3">Your Message</label>
+						<div class="input-group">
+							<span class="input-group-text"> <i
+								class="fas fa-file-text"></i>
+							</span>
+							<textarea th:field="*{content}" id="message" name="content"
+								rows="5" class="form-control"
+								th:classappend="${#fields.hasErrors('content') ? 'is-invalid' : ''}"></textarea>
+							<div class="invalid-feedback"
+								th:each="e : ${#fields.errors('content')}" th:text="${e}"></div>
+						</div>
+					</div>
+
+
+
+					<div class="d-flex justify-content-end">
+						<button type="submit" class="btn btn-primary">Send
+							Message</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

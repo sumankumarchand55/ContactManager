@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{loginbase::layout(~{::section}, ~{::title})}">
+<head>
+<meta charset="UTF-8">
+<title>Search Contacts-ContactManager</title>
+</head>
+<body>
+	<section>
+		<link th:href="@{/css/login/table.css}" rel="stylesheet">
+
+		<h2 class="text-center text-myblue"
+			th:text="'Search Results:' + 
+			${pageContact.totalElements}+'' ">Search
+			Results..</h2>
+		<h5 class="text-center text-myblue"
+			th:text="'Results found for field:  ' +
+			 ${contactSearchForm.field} + ' with value: ' + ${contactSearchForm.keyword}+''">
+		</h5>
+
+
+		<div class="container mt-3 col-md-15 bg-secondary rounded">
+			<label></label>
+			<!-- Search and filter functionalities -->
+			
+			
+		<div>
+		
+			<form th:object="${contactSearchForm}"
+				th:action="@{'/user/contacts/search'}">
+				<div class="row mb-4">
+					<div
+						class="col-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+						<select th:field="*{field}" name="field"
+							class="form-select form-select-sm mx-1"
+							aria-label=".form-select-sm example">
+							<option selected value="firstName">Select Field</option>
+							<option value="firstName">First Name</option>
+							<option value="lastName">Last Name</option>
+							<option value="email">Email</option>
+							<option value="phone">Phone Number</option>
+						</select>
+						<div class="input-group">
+							<span class="input-group-text bg-white border-end-0"> <i
+								class="fas fa-search text-muted"></i>
+							</span> <input th:field="*{keyword}" name="keyword" type="text"
+								class="form-control border-start-0 ps-0" id="myInput"
+								placeholder="Search contacts...">
+						</div>
+						<button type="submit" class="btn btn-dark searbtn"
+							onclick="trimInput()">search</button>
+					</div>
+
+					<div
+						class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
+						<a href="#" th:href="@{/user/contacts/add}"
+							class="btn text-light fw-bold link-dark"> <i
+							class="fas fa-plus-circle text-light"></i> ADD NEW
+						</a>
+					</div>
+				</div>
+			</form>	
+				<div th:if="${pageContact.totalElements>0}" class="btn-group">
+					<button type="button"
+						class="btn btn-success dropdown-toggle searbtn ms-2 mb-1"
+						data-bs-toggle="dropdown" aria-expanded="false">
+						<i class="fa-solid fa-file-export text-dark fw-bold"></i> Export
+					</button>
+					<ul class="dropdown-menu bg-dark">
+						<li>
+							<a class="dropdown-item text-success link-dark fw-bold rounded"
+								onclick="exportToExcel()">
+								<i class="fa-solid fa-file-excel me-1 text-success" style="font-size: 20px;"></i>
+								EXCEL
+							</a>
+						</li>
+						<li>
+						 <hr class="dropdown-divider">
+						 </li>
+						<li>
+							<a class="dropdown-item text-danger link-dark fw-bold rounded"
+								onclick="exportToPdf()">
+								<i class="fa-solid fa-file-pdf me-1 text-danger" style="font-size: 20px;"></i>
+								 PDF
+							</a>
+						</li>
+					</ul>
+				</div>
+		</div>
+
+
+			<div class="table-responsive">
+
+				<div th:if="${message}" th:classappend="${message.type}"
+					class="alert alert-dismissible">
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+					<p class="text-center" th:text="${message.content}"></p>
+				</div>
+
+				<h3 th:if="${pageContact.totalElements<=0}"
+					class="text-red text-center bg-light">No results found for
+					your search!!!!!</h3>
+
+				<table th:if="${pageContact.totalElements>0}"
+					class="table table-hover">
+					<thead class="table-light">
+						<tr>
+							<th style="padding-left: 110px;">Name</th>
+							<th style="padding-left: 50px;">Phone</th>
+							<th style="padding-left: 30px;">Last Update</th>
+							<th style="padding-left: 0px;">Favorite</th>
+							<th style="padding-left: 8px;">View</th>
+							<th style="padding-left: 0px;">Action</th>
+						</tr>
+					</thead>
+					<tbody id="myTable">
+						<tr th:object="${c}" th:each="c:${pageContact.getContent()}">
+
+							<td data-bs-toggle="modal" data-bs-target="#contactModal"
+								th:onclick="'loadContactdata('+*{id}+')'">
+								<div class="d-flex align-items-center mt-3">
+									<img th:src="*{image}" alt=""
+										onerror="this.onerror=null; this.src='/img/login/onerror.png';"
+										class="rounded-circle me-2" width="40" height="40">
+									<div>
+										<span class="fw-bold"
+											th:text="*{firstName}"></span><br>
+										<!-- <i
+											class="fas fa-envelope text-red"></i> -->
+										<small class="text-muted" th:text="*{email}"> </small>
+									</div>
+								</div>
+							</td>
+
+							<td class="fw-bold" data-bs-toggle="modal"
+								data-bs-target="#contactModal"
+								th:onclick="'loadContactdata('+*{id}+')'">
+								<div class="d-flex align-items-center mt-3">
+									<i class="fas fa-phone-alt me-1 text-myblue"></i> <span
+										class="text-myblue" th:text="*{phone}"></span>
+								</div>
+							</td>
+							<td>
+								<div class="d-flex align-items-center mt-3"
+									th:text="*{getFormattedUpdatedAt()}"></div>
+							</td>
+
+							<td><i th:if="*{favorite}" class="fa-solid fa-star"
+								style="color: yellow;"></i> <i th:unless="*{favorite}"
+								class="fa-solid fa-star" style="color: gray;"></i></td>
+
+							<td><i data-bs-toggle="modal" data-bs-target="#contactModal"
+								th:onclick="'loadContactdata('+*{id}+')'"
+								class="fas fa-eye fw-bold text-cm"></i></td>
+
+
+							<td>
+								<div class="dropdown dropup me-4">
+									<a href="#" class="text-dark" id="dropdownMenuButton"
+										data-bs-toggle="dropdown" aria-expanded="false"> <i
+										class="fas fa-ellipsis fw-bold"></i>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-end mt-3 p-3 shadow-lg"
+										aria-labelledby="dropdownMenuButton">
+										<li class="d-flex justify-content-between mb-2"><a
+											class="btn btn-outline-primary d-flex align-items-center me-2"
+											data-bs-toggle="modal" data-bs-target="#updateContactModal"
+											th:onclick="'get_details('+*{id}+')'"> <i
+												class="fas fa-edit me-1"></i>Update
+										</a> <a class="btn btn-outline-danger d-flex align-items-center"
+											th:data-id="${c.id}" th:data-first-name="${c.firstName}"
+											th:onclick="deleteContact(this.getAttribute('data-id'), this.getAttribute('data-first-name'))">
+												<i class="fas fa-trash-alt me-1"></i>Delete
+										</a></li>
+									</ul>
+								</div>
+
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div>
+				<table class="table d-none" id="hiddenTable" >
+					<thead>
+						<tr>
+							<th class="text-service">Name</th>
+							<th class="text-service">Email</th>
+							<th class="text-service">Phone</th>
+							<th class="text-service">Created Date</th>
+							<th class="text-service">Last Update</th>
+						</tr>
+					</thead>
+					<tbody th:object="${c}" th:each="c:${pageContact.getContent()}">
+						<tr>
+							<td th:text="*{firstName} + '' + *{lastName}" class="fw-bold"></td>
+							<td th:text="*{email}" class="fw-bold"></td>
+							<td th:text="*{phone}" class="fw-bold"></td>
+							<td th:text="*{getFormattedCreatedAt()}" class="fw-bold"></td>
+							<td th:text="*{getFormattedUpdatedAt()}" class="fw-bold"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+
+			<!-- 	<ul class="pagination justify-content-center"
+				th:if="${pageContact.totalElements > 0}">
+				<li th:unless="${pageContact.first}" class="page-item"><a
+					th:href="@{'/user/contacts/search(page=${pageContact.number - 1}, size=${pageContact.size}, field=${contactSearchForm.field}, keyword=${contactSearchForm.keyword})'}"
+					class="page-link">Previous</a></li>
+				<li class="page-item"
+					th:each="index : ${#numbers.sequence(0, pageContact.totalPages - 1)}">
+					<a
+					th:href="@{'/user/contacts/search(page=${index}, size=${pageContact.size}, field=${contactSearchForm.field}, keyword=${contactSearchForm.keyword})'}"
+					th:classappend="${index == pageContact.number ? 'bg-secondary' : ''} page-link link-dark">
+						<span th:text="${index + 1}"></span>
+				</a>
+				</li>
+				<li th:unless="${pageContact.last}" class="page-item"><a
+					th:href="@{'/user/contacts/search(page=${pageContact.number + 1}, size=${pageContact.size}, field=${contactSearchForm.field}, keyword=${contactSearchForm.keyword})'}"
+					class="page-link">Next</a></li>
+			</ul>
+ -->
+			<label></label>
+		</div>
+		<label></label>
+
+		<div
+			data-th-replace="~{/fragments/afterlogin/contact_modal :: contact-modal}"></div>
+		<div
+			data-th-replace="~{/fragments/afterlogin/update_contact_modal :: update-contact-modal}"></div>
+       
+       <script
+			src="https://cdn.jsdelivr.net/npm/@linways/table-to-excel@1.0.4/dist/tableToExcel.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+
+		<script th:src="@{/js/contacts.js}"></script>
+
+		<script>
+			function trimInput() {
+				const input = document.getElementById('myInput');
+				input.value = input.value.trim();
+			}
+			
+			  function exportToExcel() {
+	                TableToExcel.convert(document.getElementById("hiddenTable"), {
+	                    name: "searched-contacts.xlsx",
+	                    sheet: {
+	                        name: "Sheet 1",
+	                    },
+	                });
+	            }
+
+	            function exportToPdf() {
+	                const { jsPDF } = window.jspdf;
+	                const doc = new jsPDF();
+	                
+	                // Create PDF document from table
+	                doc.text("Searched Contacts List", 14, 16);
+	                
+	                doc.autoTable({
+	                    html: '#hiddenTable',
+	                    startY: 22,
+	                    theme: 'grid'
+	                });
+	                doc.save("searched-contacts.pdf");
+	            }
+		</script>
+
+	</section>
+</body>
+</html>

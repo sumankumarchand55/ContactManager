@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+th:replace="~{base::layout(~{::section}, ~{::title})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery-ContactManager</title>
+</head>
+<body>
+<section>
+
+    <div class="tab container-sm bg-light" style="margin-top: 50px; border-radius:10px">
+<button class="tablinks text-dark fw-bold" onclick="openCity(event, 'London')" id="defaultOpen">
+  <i class="fas fa-image fw-bold text-primary" style="font-size: 35px;"></i>
+</button>
+<button class="tablinks text-dark fw-bold" onclick="openCity(event, 'Paris')">
+  <i class="fa-solid fa-video fw-bold text-danger" style="font-size: 35px;"></i>
+</button>
+    </div>
+
+    <!-- Image Gallery Section -->
+    <div id="London" class="tabcontent container bg-light" style="margin-bottom:100px; border-radius:10px">
+        <div class="gallery-container">
+            <h2 class="gallery-header fw-bold text-center">ALL PHOTOS</h2>
+            <div class="gallery-grid">
+                <!-- Gallery Images -->
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery1.jpg" alt="Large gallery image">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery8.png" alt="Gallery image 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery9.png" alt="Gallery image 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery10.png" alt="Gallery image 10">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery11.png" alt="Gallery image 11">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery7.png" alt="Gallery image 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery2.jpg" alt="Gallery image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery3.jpg" alt="Gallery image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery4.jpg" alt="Gallery image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery5.jpg" alt="Gallery image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="/img/gallery/gallery6.png" alt="Gallery image 6">
+                </div>
+            </div>
+            <div class="view-gallery">
+                <a href="/">Return home</a>
+            </div>
+        </div>
+    </div>
+
+ <!-- Video Gallery Section -->
+<div id="Paris" class="tabcontent container bg-light d-flex flex-column justify-content-center align-items-center" style="margin-bottom:100px; border-radius:10px;">
+    <div class="video-gallery text-center">
+        <h2 class="gallery-header fw-bold">ALL VIDEOS</h2>
+        <div class="d-flex justify-content-center flex-wrap">
+            <video class="video-item" width="320" height="240" controls>
+                <source src="/video/video1.mp4" type="video/mp4">
+            </video>
+            <video class="video-item" width="320" height="240" controls>
+                <source src="/video/video1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="view-gallery mt-3">
+        <a href="/">Return home</a>
+    </div>
+</div>
+
+
+    <script>
+        // Function to handle tab switching
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</section>
+
+</body>
+</html>

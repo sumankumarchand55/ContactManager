@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{loginbase::layout(~{::section}, ~{::title})}">
+<head>
+<meta charset="UTF-8">
+<title>AddContacts-ContactManager</title>
+</head>
+<body>
+	<section>
+
+		<div data-th-replace="~{/fragments/afterlogin/spinner :: spinner}"></div>
+
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-md-13">
+					<div class="my-card mt-3 signuphover rounded">
+						<div th:if="${message}" th:classappend="${message.type}"
+							class="alert alert-dismissible">
+							<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+							<h5 class="text-center" th:text="${message.content}"></h5>
+						</div>
+
+						<div class="container text-center">
+							<img style="width: 70px" alt=""
+								th:src="@{/img/login/newcontact.png}">
+						</div>
+						<h3 class="text-center">New Contact</h3>
+						<p class="text-muted">This Contact will going to store on
+							cloud, you can directly email this contact after successfully
+							save!!!</p>
+
+						<form th:action="@{/user/contacts/add}" method="post"
+							th:object="${contactForm}" enctype="multipart/form-data">
+							<!-- First Name Field  -->
+							<div class="form-group">
+								<label for="first_name" class="form-label fw-bold">
+									FirstName*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i class="fas fa-user"></i></span>
+									<input type="text" th:field="*{firstName}" class="form-control"
+										th:classappend="${#fields.hasErrors('firstName') ? 'is-invalid' : ''}"
+										aria-describedby="nameHelp" placeholder="First Name!!!"
+										autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('firstName')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+							<!-- Sur Name Field  -->
+							<div class="form-group">
+								<label for="last_name" class="form-label fw-bold">
+									Surname*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i class="fas fa-user"></i></span>
+									<input type="text" th:field="*{lastName}" class="form-control"
+										th:classappend="${#fields.hasErrors('lastName') ? 'is-invalid' : ''}"
+										aria-describedby="nameHelp" placeholder="SurName!!!"
+										autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('lastName')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="contact_phno" class="form-label fw-bold">
+									Phone*</label>
+								<div class="input-group">
+									<!-- Icon inside the input group -->
+									<span class="input-group-text"> <i class="fas fa-phone"></i></span>
+									<input type="text" th:field="*{phone}" class="form-control"
+										th:classappend="${#fields.hasErrors('phone') ? 'is-invalid' : ''}"
+										aria-describedby="nameHelp" placeholder="Phone Number!!!"
+										autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('phone')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+
+							<!-- Email Field  -->
+							<div class="from-group">
+								<label for="contact_email" class="form-label fw-bold">
+									Email* </label>
+								<div class="input-group">
+									<span class="input-group-text"> <i
+										class="fas fa-envelope"></i>
+									</span> <input type="email" name="email" class="form-control"
+										th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}"
+										aria-describedby="emailHelp"
+										placeholder="contact@sumanisowner.com"
+										th:value="${contactForm.email}" autocomplete="off" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('email')}" th:text="${e}"></div>
+								</div>
+							</div>
+
+
+							<label></label>
+
+							<div class="form-group">
+								<label for="image_upload" class="form-label fw-bold mb-0">Contact
+									Picture*</label>
+
+								<div class="input-group">
+									<span class="input-group-text"> <i class="fas fa-image"></i>
+									</span> <input id="image_file_input" type="file"
+										th:classappend="${#fields.hasErrors('contactImage') ? 'is-invalid' : ''}"
+										th:field="*{contactImage}" class="form-control"
+										aria-describedby="imageHelp" accept="image/*" />
+									<div class="invalid-feedback"
+										th:each="e : ${#fields.errors('contactImage')}" th:text="${e}"></div>
+							</div>
+
+							<small id="imageHelp" class="form-text mb-1 text-muted">(Please
+								upload a JPG or PNG)</small>
+
+							<!-- Profile image preview -->
+							<div class="image-container text-center">
+								<img class="profile-image mx-auto rounded-circle shadow"
+									alt="Profile Image" id="image_preview" src="">
+							</div>
+					</div>
+
+
+					<div class="form-check m-3">
+						<input type="checkbox" class="form-check-input" id="check2"
+							name="option2" th:field="*{favorite}"> <label
+							class="form-check-label" for="check2"> is this contact
+							your favorite one? </label>
+					</div>
+
+					<div class="container text-center mt-2">
+
+						<button type="submit" class="btn mybtn btn-primary"
+							onclick="submitForm()">Create</button>
+
+						<button type="reset" class="btn btn-danger">Reset</button>
+					</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script th:src="@{/js/image-preview.js}"></script>
+	</section>
+</body>
+</html>

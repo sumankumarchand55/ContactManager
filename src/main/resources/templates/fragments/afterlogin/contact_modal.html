@@ -1,0 +1,95 @@
+<div data-th-fragment="contact-modal">
+	<div class="container mt-3">
+
+		<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+			data-bs-target="#myModal">Open modal</button> -->
+	</div>
+	<!-- The Modal -->
+	<div class="modal fade" id="contactModal">
+		<div class="modal-dialog modal-dialog-centered custom-modal">
+			<div class="modal-content bg-dark">
+
+				<!-- Modal Header -->
+
+				<button type="button" class="btn-close justify-content-end"
+					data-bs-dismiss="modal"></button>
+
+
+				<div class="text-center">
+					<label for="Image"> </label> <img id="Image" src=""
+						alt="Profile Image" class="profile-icon"
+						style="width: 150px; height: 150px; border-radius: 50%;" />
+				</div>
+
+				<!-- Modal body -->
+
+				<div
+					class="modal-body d-flex flex-column justify-content-center align-items-center">
+                    
+                    <div class="text-center">
+						<div class="d-flex align-items-center justify-content-center">
+							<i class="fas fa-envelope text-red me-1 mb-1"></i> <label for="Email"></label>
+							<h6 id="Email" class="fw-bold text-cm"></h6>
+						</div>
+					</div>
+					
+
+					<div class="text-center mb-2">
+						<div class="d-flex align-items-center justify-content-center">
+							<i class="fas fa-user text-primary me-1"></i>
+							<h6 id="FirstName" class="mb-0 me-1 fw-bold text-cm">First Name</h6>
+							<h6 id="LastName" class="mb-0 fw-bold text-cm">Last Name</h6>
+						</div>
+					</div>
+
+					<div class="text-center mb-5">
+						<div class="d-flex align-items-center justify-content-center">
+							<i class="fas fa-phone text-red me-1 mb-2"></i> <label for="PhoneNo"></label>
+							<h6 id="PhoneNo" class="fw-bold text-cm"></h6>
+						</div>
+					</div>
+
+					<!-- <div class="text-center mb-3">
+						<div class="d-flex align-items-center justify-content-center">
+							<i class="fas fa-star text-warning me-2 mb-2"></i>
+							<p class="fw-bold text-cm">Favorite:</p>
+							<p id="Favorite" class="fw-bold text-cm"></p>
+						</div>
+					</div> -->
+					
+					<div class="d-flex">
+						<div class="btn-group me-1">
+							<button type="button" class="btn btn-primary dropup rounded"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-phone fw-bold"></i> Call Now
+							</button>
+							<ul class="dropdown-menu dropdown-menu-end body">
+								<li><a class="dropdown-item fw-bold text-red">THIS SERVICE WILL
+										AVAILABLE SOON !!!!</a></li>
+							</ul>
+						</div>
+
+						<div class="btn-group me-2">
+							<button type="button" class="btn btn-danger rounded"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fas fa-comment fw-bold "></i> Message
+							</button>
+							<ul class="dropdown-menu body">
+								<li><a class="dropdown-item fw-bold text-red">THIS SERVICE WILL
+										AVAILABLE SOON !!!!</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal footer -->
+				<div class="modal-footer border-0">
+					<button type="button" class="btn btn-warning"
+						data-bs-dismiss="modal">Close</button>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>

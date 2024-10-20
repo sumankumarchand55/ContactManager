@@ -1,0 +1,83 @@
+.profile-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.dropdown-item:hover {
+    background-color:LightGray; 
+    color: #e3e3e3 ; 
+}
+
+.dropdown-item:focus {
+    background-color: LightGray;
+    color: #e3e3e3 ;
+}
+.body{
+	color:#e3e3e3;
+}
+   .sidebar {
+        height: 100vh; 
+        position: sticky;
+        top: 0;
+        transition: all 0.3s ease-in-out;
+    }   
+       @media (max-width: 992px) {
+        .sidebar {
+            position: fixed;
+            left: -280px;
+            top: 0;
+            height: 100%;
+            z-index: 100;
+        }  
+        
+        .sidebar.active {
+            left: 0;
+        }
+
+        /* Button position */
+        #sidebarToggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 200;
+        }
+    }
+    
+    .side:hover {
+    background-color:LightGray; 
+    color: #e3e3e3 ; 
+}
+
+#sidebarToggle {
+    position: relative;
+    top:0px; 
+    left:10px; 
+    z-index: 1000; 
+}
+
+
+.image-container {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+
+.profile-image {
+  width: 150px;   /* Adjust as per your needs */
+  height: 150px;  /* Adjust as per your needs */
+  object-fit: cover;
+  border-radius: 50%; /* Makes it a perfect circle */
+  border: 2px solid #ddd; /* Optional: Adds a border around the image */
+}
+
+.custom-modal {
+    max-width: 400px; /* Adjust this value as needed */
+    width: 100%; /* Ensures it takes full width up to max-width */
+}
+
+@media (max-width: 576px) { /* Bootstrap's small screen breakpoint */
+    .custom-modal {
+        max-width: 90%; /* Adjust this value as needed for small screens */
+        margin: auto; /* Center the modal */
+    }
+}

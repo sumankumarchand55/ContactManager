@@ -1,0 +1,49 @@
+<div data-th-fragment="update-contact-modal">
+
+     <div data-th-replace="~{/fragments/afterlogin/spinner :: spinner}"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="updateContactModal" tabindex="-1" aria-labelledby="updateContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center fw-bold" id="updateContactModalLabel">Update Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateContactForm" enctype="multipart/form-data">
+                        <div class="text-center mb-3">
+                            <img id="ImagePreview" alt="Profile" class="profile-image mb-2">
+                            <input type="file" class="form-control" id="ImageUpdate" accept="image/*" onchange="previewImage(this);">
+                        </div>
+                        <div class="mb-3">
+                            <label for="FirstNameUpdate" class="form-label fw-bold">First Name*</label>
+                            <input type="text" class="form-control" id="FirstNameUpdate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="LastNameUpdate" class="form-label fw-bold">Last Name*</label>
+                            <input type="text" class="form-control" id="LastNameUpdate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="EmailUpdate" class="form-label fw-bold">Email*</label>
+                            <input type="email" class="form-control" id="EmailUpdate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="PhoneNoUpdate" class="form-label fw-bold">Phone*</label>
+                            <input type="tel" class="form-control" id="PhoneNoUpdate">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="FavoriteUpdate">
+                            <label class="form-check-label fw-bold" for="FavoriteUpdate">Favorite</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger rounded" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary rounded" onclick="submitForm()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
