@@ -1,76 +1,93 @@
 <h1>ContactManager - SpringBoot Project</h1>
-We have developed this ContactManager web application. This API performs all the fundamental CRUD operations related to managing contacts and user accounts,
-with robust user authentication and authorization for security.
 
-This project is developed solely by Suman Kumar Chand and during personal project work.
+<p>We have developed this ContactManager web application, which performs all fundamental CRUD operations related to managing contacts and user accounts. This application is designed with robust user authentication and authorization for enhanced security.</p>
 
-E-R Diagram for the Application
-E-R Diagram: 
-![Screenshot 2024-10-21 155156](https://github.com/user-attachments/assets/803db8ec-d297-4e4b-b746-8d9cfbcc5efe)
-Tech Stack
-Java
-Spring Framework
-Spring Boot
-Spring Data JPA
-Hibernate
-Oracle DB
+<p>This project is developed solely by <strong>Suman Kumar Chand</strong> during personal project work.</p>
 
-<h1>Modules</h1>
-User Authentication and Authorization
-User Management Module
-Contact Management Module
-Create,read,update and add to favorite to contacts.
-Dynamic Search Functionality
+<h2>E-R Diagram for the Application</h2>
+<p>E-R Diagram:</p>
+<img src="https://github.com/user-attachments/assets/803db8ec-d297-4e4b-b746-8d9cfbcc5efe" alt="E-R Diagram" />
 
-<h1>Features</h1>
-User Authentication:
-Registration, login, and logout functionalities for users with forgot password option.
-User Spring security for Authentication and AuthoriZation for personalize data.
+<h2>Tech Stack</h2>
+<ul>
+  <li>Java</li>
+  <li>Spring Framework</li>
+  <li>Spring Boot</li>
+  <li>Spring Data JPA</li>
+  <li>Hibernate</li>
+  <li>Oracle DB</li>
+</ul>
 
-<h1>User Features:</h1>
-Register: Users can sign up and create an account mannually or direct through Google.
-Login: Users can log in using valid credentials or direct through Google.
-View & Update Profile: Logged-in users can view and update their personal information like password, phone number,profile image,D.O.B,Name etc.
-Manage Contacts: Users can add, update, delete, and view their contacts.
+<h2>Modules</h2>
+<ul>
+  <li><strong>User Authentication and Authorization:</strong> Registration, login, and personalized access.</li>
+  <li><strong>User Management Module:</strong> Create, update, view, and delete user accounts.</li>
+  <li><strong>Contact Management Module:</strong> Create, read, update, and delete contacts with options to mark as favorites.</li>
+  <li><strong>Dynamic Search Functionality:</strong> Real-time search across contacts and user data.</li>
+</ul>
 
-<h1>Contributors</h1>
-Suman Kumar Chand (Developer, Student)
-Installation & Run
-Before running the API server, make sure to update the database configuration inside the application.properties file:
+<h2>Features</h2>
 
-<h1>properties</h1>
-Copy code
+<h3>User Authentication</h3>
+<p>The application includes registration, login, and logout functionalities for users, with a "forgot password" option. It uses Spring Security for authentication and authorization to ensure personalized access to user data.</p>
+
+<h2>User Features</h2>
+<ul>
+  <li><strong>Register:</strong> Users can sign up and create accounts either manually or through Google authentication.</li>
+  <li><strong>Login:</strong> Users can log in with valid credentials or through Google sign-in.</li>
+  <li><strong>View & Update Profile:</strong> Logged-in users can view and update their personal information, such as password, phone number, profile image, D.O.B, name, and more.</li>
+  <li><strong>Manage Contacts:</strong> Users can add, update, delete, and view their contacts with ease.</li>
+</ul>
+
+<h2>Contributors</h2>
+<p><strong>Suman Kumar Chand</strong> (Developer, Student)</p>
+
+<h2>Installation & Run</h2>
+<p>Before running the API server, ensure to update the database configuration in the <code>application.properties</code> file:</p>
+
+<h3>Properties Configuration:</h3>
+<pre>
 server.port=8080
 spring.datasource.url=jdbc:oracle:thin:@//MSI:1521/orcl
 spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
 spring.datasource.username=...
 spring.datasource.password=..
+</pre>
 
- <h1>All Page Details</h1>
+<h2>All Page Details</h2>
 
-<h3>Root Endpoint</h3>
-https://localhost:8080/
+<h3>Root Endpoint:</h3>
+<ul>
+  <li><a href="https://localhost:8080/">https://localhost:8080/</a></li>
+</ul>
 
-<h3>Without Authentication Pages</h3>
-https://localhost:8080/about:About Page
-https://localhost:8080/service:Service Page
-https://localhost:8080/contact:Contact Page
-https://localhost:8080/meetus:Meet Out Team Page
-https://localhost:8080/gallery:Our Gallery
+<h3>Without Authentication Pages:</h3>
+<ul>
+  <li><a href="https://localhost:8080/about">About Page</a></li>
+  <li><a href="https://localhost:8080/service">Service Page</a></li>
+  <li><a href="https://localhost:8080/contact">Contact Page</a></li>
+  <li><a href="https://localhost:8080/meetus">Meet Our Team Page</a></li>
+  <li><a href="https://localhost:8080/gallery">Our Gallery</a></li>
+</ul>
 
-<h3>Authentication Pages</h3>
-https://localhost:8080/signup: Register a new user Page.
-https://localhost:8080/login: Log in a user with valid credentials Page.
-https://localhost:8080/logout: Log out a user.
-http://localhost:8080/auth/forgot-password:Forgot Password Page
+<h3>Authentication Pages:</h3>
+<ul>
+  <li><a href="https://localhost:8080/signup">Register a new user</a></li>
+  <li><a href="https://localhost:8080/login">Login</a></li>
+  <li><a href="https://localhost:8080/logout">Logout</a></li>
+  <li><a href="http://localhost:8080/auth/forgot-password">Forgot Password</a></li>
+</ul>
 
-<h3>User After Login Pages</h3>
-http://localhost:8080/user/index:User Dash-board Page
-http://localhost:8080/user/profile: User Profile Details Page with Change Password Modal.
-http://localhost:8080/user/contacts: User View All Contact Page and also Update And Delete and view their by modal and export as well.
-http://localhost:8080/user/contacts/add:Create New Contact after Login Page 
-http://localhost:8080/user/contacts/favorites: Favorite Contacts Page.
-http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search result after searching Page
+<h3>User After Login Pages:</h3>
+<ul>
+  <li><a href="http://localhost:8080/user/index">User Dashboard</a></li>
+  <li><a href="http://localhost:8080/user/profile">User Profile Details</a> (includes Change Password Modal)</li>
+  <li><a href="http://localhost:8080/user/contacts">View All Contacts</a> (includes Update, Delete, and export options)</li>
+  <li><a href="http://localhost:8080/user/contacts/add">Create New Contact</a></li>
+  <li><a href="http://localhost:8080/user/contacts/favorites">Favorite Contacts</a></li>
+  <li><a href="http://localhost:8080/user/contacts/search?field=firstName&keyword=suman">Search Results</a></li>
+</ul>
+<h1>EXPLORE WEBSITE</h1>
 
 <h1>Screen Shots of Website Desktop View Before Login</h1>
 
