@@ -62,31 +62,37 @@ spring.datasource.username=...
 spring.datasource.password=..
 </pre>
 
- <h1>All Page Details</h1>
+<h1>All Page Details</h1>
 
 <h3>Root Endpoint</h3>
-https://localhost:8080/
+<p>https://localhost:8080/</p>
 
 <h3>Without Authentication Pages</h3>
-https://localhost:8080/about:About Page
-https://localhost:8080/service:Service Page
-https://localhost:8080/contact:Contact Page
-https://localhost:8080/meetus:Meet Out Team Page
-https://localhost:8080/gallery:Our Gallery
+<ul>
+  <li>https://localhost:8080/about: About Page</li>
+  <li>https://localhost:8080/service: Service Page</li>
+  <li>https://localhost:8080/contact: Contact Page</li>
+  <li>https://localhost:8080/meetus: Meet Our Team Page</li>
+  <li>https://localhost:8080/gallery: Our Gallery</li>
+</ul>
 
 <h3>Authentication Pages</h3>
-https://localhost:8080/signup: Register a new user Page.
-https://localhost:8080/login: Log in a user with valid credentials Page.
-https://localhost:8080/logout: Log out a user.
-http://localhost:8080/auth/forgot-password:Forgot Password Page
+<ul>
+  <li>https://localhost:8080/signup: Register a new user Page</li>
+  <li>https://localhost:8080/login: Log in a user with valid credentials Page</li>
+  <li>https://localhost:8080/logout: Log out a user</li>
+  <li>http://localhost:8080/auth/forgot-password: Forgot Password Page</li>
+</ul>
 
 <h3>User After Login Pages</h3>
-http://localhost:8080/user/index:User Dash-board Page
-http://localhost:8080/user/profile: User Profile Details Page with Change Password Modal.
-http://localhost:8080/user/contacts: User View All Contact Page and also Update And Delete and view their by modal and export as well.
-http://localhost:8080/user/contacts/add:Create New Contact after Login Page 
-http://localhost:8080/user/contacts/favorites: Favorite Contacts Page.
-http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search result after searching Page
+<ul>
+  <li>http://localhost:8080/user/index: User Dashboard Page</li>
+  <li>http://localhost:8080/user/profile: User Profile Details Page with Change Password Modal</li>
+  <li>http://localhost:8080/user/contacts: View All Contacts Page (includes Update, Delete, view modal, and export features)</li>
+  <li>http://localhost:8080/user/contacts/add: Create New Contact Page</li>
+  <li>http://localhost:8080/user/contacts/favorites: Favorite Contacts Page</li>
+  <li>http://localhost:8080/user/contacts/search?field=firstName&keyword=suman: Search Result Page</li>
+</ul>
 
 <h1>EXPLORE WEBSITE</h1>
 
