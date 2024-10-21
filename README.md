@@ -74,7 +74,7 @@ http://localhost:8080/user/contacts/favorites: Favorite Contacts Page.
 http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search result after searching Page
 
  <h1> Screen Shots of website Desktop view Before login</h1>
- ![Screenshot](https://github.com/user-attachments/assets/47d691e5-1ff0-40d7-bdf3-e46463a831c3)
+ ![Screenshot]()
  
 ![Screenshot 2024-10-21 164254](https://github.com/user-attachments/assets/98fbbde8-2c3b-42a4-9159-fa3840be50d4)
 ![Screenshot 2024-10-21 164406](https://github.com/user-attachments/assets/cbcf45d8-c9b7-46f3-aba2-81c9c0681f52)
