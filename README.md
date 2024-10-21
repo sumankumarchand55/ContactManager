@@ -2,7 +2,7 @@
 We have developed this ContactManager web application. This API performs all the fundamental CRUD operations related to managing contacts and user accounts,
 with robust user authentication and authorization for security.
 
-This project is developed solely by Suman Kumar Chand and his team during personal project work.
+This project is developed solely by Suman Kumar Chand and during personal project work.
 
 E-R Diagram for the Application
 E-R Diagram: 
