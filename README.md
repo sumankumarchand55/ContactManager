@@ -87,7 +87,14 @@ http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search 
 ![Screenshot 2024-10-21 164756](https://github.com/user-attachments/assets/5795a605-c635-43d0-b56e-813fd7dcf159)
 ![Screenshot 2024-10-21 164841](https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067)
 
+ <h1> Screen Shots of website Desktop view login & Signup</h1>
 
+ ![Screenshot 2024-10-21 164921](https://github.com/user-attachments/assets/343a5e3b-9915-4f59-b055-84103759dc76)
+ ![Screenshot 2024-10-21 165023](https://github.com/user-attachments/assets/6d7a8875-537c-44ec-82c3-74a9607a4fc3)
+![Screenshot 2024-10-21 165122](https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6)
+![Screenshot 2024-10-21 165149](https://github.com/user-attachments/assets/e9763d7a-6834-4b31-81e3-e3cfe2a6cc82)
+
+ <h1> Screen Shots of website After Login</h1>
 
 
 
