@@ -73,5 +73,27 @@ http://localhost:8080/user/contacts/add:Create New Contact after Login Page
 http://localhost:8080/user/contacts/favorites: Favorite Contacts Page.
 http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search result after searching Page
 
-  Screen Shots of website Desktop view 
+ <h1> Screen Shots of website Desktop view Before login</h1>
+![Screenshot 2024-10-21 164254](https://github.com/user-attachments/assets/98fbbde8-2c3b-42a4-9159-fa3840be50d4)
+![Screenshot 2024-10-21 164406](https://github.com/user-attachments/assets/cbcf45d8-c9b7-46f3-aba2-81c9c0681f52)
+![Screenshot 2024-10-21 164441](https://github.com/user-attachments/assets/560c550d-988e-4558-86cb-b8b6584c68b2)
+![Screenshot 2024-10-21 164512](https://github.com/user-attachments/assets/00242097-221c-4b91-9b2f-c02bc69262dc)
+![Screenshot 2024-10-21 164547](https://github.com/user-attachments/assets/46008db9-6a43-4b8c-9583-f3befcf02c22)
+![Screenshot 2024-10-21 164618](https://github.com/user-attachments/assets/4e6b1136-4cea-41af-8ffc-15b10786f0ba)
+![Screenshot 2024-10-21 164643](https://github.com/user-attachments/assets/bcab16c4-75fa-4df7-8e70-0960ff44007f)
+![Screenshot 2024-10-21 164730](https://github.com/user-attachments/assets/47d691e5-1ff0-40d7-bdf3-e46463a831c3)
+![Screenshot 2024-10-21 164756](https://github.com/user-attachments/assets/5795a605-c635-43d0-b56e-813fd7dcf159)
+![Screenshot 2024-10-21 164841](https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067)
+
+
+
+
+
+
+
+
+
+
+
+
   
