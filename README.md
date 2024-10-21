@@ -1,5 +1,5 @@
-Smart Contact Manager - SpringBoot Project
-We have developed this REST API for the ContactManager web application. This API performs all the fundamental CRUD operations related to managing contacts and user accounts,
+<h1>ContactManager - SpringBoot Project</h1>
+We have developed this ContactManager web application. This API performs all the fundamental CRUD operations related to managing contacts and user accounts,
 with robust user authentication and authorization for security.
 
 This project is developed solely by Suman Kumar Chand and his team during personal project work.
@@ -176,7 +176,7 @@ http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search 
     <td><img src="https://github.com/user-attachments/assets/6a7f22ad-a9d3-4cf2-864c-bc6a8b7ba2ae" width="200"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/f7661f28-d71d-4e46-9e55-611500f4161a" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/6edaf149-728f-420c-9480-880e827f842f" width="200"/></td>
     <td><img src="https://github.com/user-attachments/assets/d6e23c4a-e95d-41a2-8ff4-dc067179d280" width="200"/></td>
     <td><img src="https://github.com/user-attachments/assets/7f9585d1-4e6c-4998-9920-db16c90d01b1" width="200"/></td>
   </tr>
