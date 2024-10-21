@@ -17,6 +17,14 @@
   <li>Hibernate</li>
   <li>Oracle DB</li>
 </ul>
+<h2>Other Knowldge</h2>
+<ul>
+  <li>Spring Tool Suite</li>
+  <li>Mail SMTP</li>
+  <li>Google Oauth</li>
+  <li>Html,css,Bootstrap & Javascript</li>
+  <li>Github</li>
+</ul>
 
 <h2>Modules</h2>
 <ul>
@@ -54,39 +62,32 @@ spring.datasource.username=...
 spring.datasource.password=..
 </pre>
 
-<h2>All Page Details</h2>
+ <h1>All Page Details</h1>
 
-<h3>Root Endpoint:</h3>
-<ul>
-  <li><a href="https://localhost:8080/">https://localhost:8080/</a></li>
-</ul>
+<h3>Root Endpoint</h3>
+https://localhost:8080/
 
-<h3>Without Authentication Pages:</h3>
-<ul>
-  <li><a href="https://localhost:8080/about">About Page</a></li>
-  <li><a href="https://localhost:8080/service">Service Page</a></li>
-  <li><a href="https://localhost:8080/contact">Contact Page</a></li>
-  <li><a href="https://localhost:8080/meetus">Meet Our Team Page</a></li>
-  <li><a href="https://localhost:8080/gallery">Our Gallery</a></li>
-</ul>
+<h3>Without Authentication Pages</h3>
+https://localhost:8080/about:About Page
+https://localhost:8080/service:Service Page
+https://localhost:8080/contact:Contact Page
+https://localhost:8080/meetus:Meet Out Team Page
+https://localhost:8080/gallery:Our Gallery
 
-<h3>Authentication Pages:</h3>
-<ul>
-  <li><a href="https://localhost:8080/signup">Register a new user</a></li>
-  <li><a href="https://localhost:8080/login">Login</a></li>
-  <li><a href="https://localhost:8080/logout">Logout</a></li>
-  <li><a href="http://localhost:8080/auth/forgot-password">Forgot Password</a></li>
-</ul>
+<h3>Authentication Pages</h3>
+https://localhost:8080/signup: Register a new user Page.
+https://localhost:8080/login: Log in a user with valid credentials Page.
+https://localhost:8080/logout: Log out a user.
+http://localhost:8080/auth/forgot-password:Forgot Password Page
 
-<h3>User After Login Pages:</h3>
-<ul>
-  <li><a href="http://localhost:8080/user/index">User Dashboard</a></li>
-  <li><a href="http://localhost:8080/user/profile">User Profile Details</a> (includes Change Password Modal)</li>
-  <li><a href="http://localhost:8080/user/contacts">View All Contacts</a> (includes Update, Delete, and export options)</li>
-  <li><a href="http://localhost:8080/user/contacts/add">Create New Contact</a></li>
-  <li><a href="http://localhost:8080/user/contacts/favorites">Favorite Contacts</a></li>
-  <li><a href="http://localhost:8080/user/contacts/search?field=firstName&keyword=suman">Search Results</a></li>
-</ul>
+<h3>User After Login Pages</h3>
+http://localhost:8080/user/index:User Dash-board Page
+http://localhost:8080/user/profile: User Profile Details Page with Change Password Modal.
+http://localhost:8080/user/contacts: User View All Contact Page and also Update And Delete and view their by modal and export as well.
+http://localhost:8080/user/contacts/add:Create New Contact after Login Page 
+http://localhost:8080/user/contacts/favorites: Favorite Contacts Page.
+http://localhost:8080/user/contacts/search?field=firstName&keyword=suman:Search result after searching Page
+
 <h1>EXPLORE WEBSITE</h1>
 
 <h1>Screen Shots of Website Desktop View Before Login</h1>
