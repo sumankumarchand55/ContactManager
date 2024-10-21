@@ -29,7 +29,7 @@
 <h2>Modules</h2>
 <ul>
   <li><strong>User Authentication and Authorization:</strong> Registration, login, and personalized access.</li>
-  <li><strong>User Management Module:</strong> Create, update, view, and delete user accounts.</li>
+  <li><strong>User Management Module:</strong> Create, update, view, and disable user accounts.</li>
   <li><strong>Contact Management Module:</strong> Create, read, update, and delete contacts with options to mark as favorites.</li>
   <li><strong>Dynamic Search Functionality:</strong> Real-time search across contacts and user data.</li>
 </ul>
