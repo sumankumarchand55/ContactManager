@@ -5,7 +5,6 @@ with robust user authentication and authorization for security.
 This project is developed solely by Suman Kumar Chand and his team during personal project work.
 
 E-R Diagram for the Application
-image link:https://res.cloudinary.com/dk7kmizvr/image/upload/v1729506505/itvczzhklhfbx84ojf5u.png
 E-R Diagram: 
 ![Screenshot 2024-10-21 155156](https://github.com/user-attachments/assets/803db8ec-d297-4e4b-b746-8d9cfbcc5efe)
 Tech Stack
