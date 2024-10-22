@@ -27,14 +27,14 @@
 <meta charset="UTF-8">
 </head>
 <body>
-    <div th:unless="${isMeetUsPage}">
+   <!-- <div th:unless="${isMeetUsPage}">
          <div data-th-replace="~{/fragments/spinner :: spinner}"></div>
-         </div>
+         </div>-->
          
-	<!--<div th:if="${logedInUser}">
+	<div th:if="${logedInUser}">
 		<div
 			th:replace="~{/fragments/afterlogin/login-navbar :: navigationbar}"></div>
-	</div>-->
+	</div>
 
 
 	<div th:unless="${logedInUser}">
