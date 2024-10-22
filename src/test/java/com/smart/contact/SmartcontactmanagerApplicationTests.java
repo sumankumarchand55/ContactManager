@@ -13,12 +13,4 @@ class SmartcontactmanagerApplicationTests {
 	void contextLoads() {
 	}
 
-	/*
-	 * @Autowired private EmailService emailService;
-	 * 
-	 * @Test void sendEmailTest() {
-	 * emailService.sendEmail("sumankumarchand55@gmail.com", "testing email send",
-	 * "After set dynamic Domain name"); }
-	 */
-
 }
