@@ -240,8 +240,8 @@ spring.datasource.password=..
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/de9c0c18-dbe6-42af-807c-44101f67376b" width="200"/></td>
-    <td><img src="https://github.com/user-attachments/assets/68c5108f-0bf0-4788-ab89-ef7949406314" width="200"/></td>
+   <td><img src="https://github.com/user-attachments/assets/e7bc9908-e2ff-474c-a708-2a5f08236fe9" width="200"/></td>
+  <td><img src="https://github.com/user-attachments/assets/68c5108f-0bf0-4788-ab89-ef7949406314" width="200"/></td>
    <td><img src="https://github.com/user-attachments/assets/49b9534f-b33d-4c43-bc6b-6e6af777fa22" width="200"/></td>
   </tr>
   <tr>
