@@ -120,7 +120,7 @@ spring.datasource.password=..
     <td><img src="https://github.com/user-attachments/assets/5795a605-c635-43d0-b56e-813fd7dcf159" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067" width="1600"/></td>
+    <td><img src="https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067" width="800"/></td>
   </tr>
 </table>
 
