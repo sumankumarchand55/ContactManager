@@ -124,16 +124,49 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Desktop View - Login & Signup</h1>
+<h1>Desktop View - Direct Login Through Google</h1>
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/343a5e3b-9915-4f59-b055-84103759dc76" width="800"/></td>
     <td><img src="https://github.com/user-attachments/assets/6d7a8875-537c-44ec-82c3-74a9607a4fc3" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6" width="800"/></td>
     <td><img src="https://github.com/user-attachments/assets/e9763d7a-6834-4b31-81e3-e3cfe2a6cc82" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6" width="800"/></td>
+  </tr>
+    <tr>
+    <td><img src="https://github.com/user-attachments/assets/e9763d7a-6834-4b31-81e3-e3cfe2a6cc82" width="800"/></td>
+   <td><img src="https://github.com/user-attachments/assets/91eadfe0-ebad-4001-ada3-ec978f08df9e" width="800"/></td>
+  </tr>
+</table>
+
+<h1>Desktop View - Mannual Sign Up and Login</h1>
+
+![Screenshot 2024-10-23 121243](https://github.com/user-attachments/assets/4d283e3e-59fa-4612-b3d4-8079dfa6c38c)
+![Screenshot 2024-10-23 121303](https://github.com/user-attachments/assets/2a65b543-a908-4a61-95b6-f880d18f1919)
+![Screenshot 2024-10-23 121320](https://github.com/user-attachments/assets/64ea2fa3-4554-490a-952f-a6ccfa21b287)
+![Screenshot 2024-10-23 121402](https://github.com/user-attachments/assets/aea66155-06d9-4d7c-80f3-f93b11b04104)
+![Screenshot 2024-10-23 121508](https://github.com/user-attachments/assets/f51161f2-8be4-4aad-a8ac-880c39f89528)
+![Screenshot 2024-10-23 121542](https://github.com/user-attachments/assets/7a95b487-b7b2-42bf-876b-354021807a6a)
+![Screenshot 2024-10-23 121559](https://github.com/user-attachments/assets/ceee8c25-c973-4098-9ef3-77f80cb71cb1)
+
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/4d283e3e-59fa-4612-b3d4-8079dfa6c38c" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/2a65b543-a908-4a61-95b6-f880d18f1919" width="800"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/64ea2fa3-4554-490a-952f-a6ccfa21b287" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/aea66155-06d9-4d7c-80f3-f93b11b04104" width="800"/></td>
+  </tr>
+    <tr>
+    <td><img src="https://github.com/user-attachments/assets/f51161f2-8be4-4aad-a8ac-880c39f89528" width="800"/></td>
+   <td><img src="https://github.com/user-attachments/assets/7a95b487-b7b2-42bf-876b-354021807a6a" width="800"/></td>
+  </tr>
+  <tr>
+   <td><img src="https://github.com/user-attachments/assets/ceee8c25-c973-4098-9ef3-77f80cb71cb1" width="800"/></td>
   </tr>
 </table>
 
