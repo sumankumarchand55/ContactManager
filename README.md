@@ -1,6 +1,6 @@
 <h1>ContactManager - SpringBoot Project</h1>
 
-<p>We have developed this ContactManager web application, which performs all fundamental CRUD operations related to managing contacts and user accounts. This application is designed with robust user authentication and authorization for enhanced security.</p>
+<p>I developed this ContactManager web application, which performs all fundamental CRUD operations related to managing contacts and user accounts. This application is designed with robust user authentication and authorization for enhanced security.</p>
 
 <p>This project is developed solely by <strong>Suman Kumar Chand</strong> during personal project work.</p>
 
