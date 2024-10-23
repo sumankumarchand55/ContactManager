@@ -128,12 +128,12 @@ spring.datasource.password=..
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/343a5e3b-9915-4f59-b055-84103759dc76" width="1000"/></td>
-    <td><img src="https://github.com/user-attachments/assets/6d7a8875-537c-44ec-82c3-74a9607a4fc3" width="1000"/></td>
+    <td><img src="https://github.com/user-attachments/assets/343a5e3b-9915-4f59-b055-84103759dc76" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/6d7a8875-537c-44ec-82c3-74a9607a4fc3" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6" width="1000"/></td>
-    <td><img src="https://github.com/user-attachments/assets/e9763d7a-6834-4b31-81e3-e3cfe2a6cc82" width="1000"/></td>
+    <td><img src="https://github.com/user-attachments/assets/e2fe9da1-6159-457d-91b5-17bcd522f3c6" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/e9763d7a-6834-4b31-81e3-e3cfe2a6cc82" width="800"/></td>
   </tr>
 </table>
 
