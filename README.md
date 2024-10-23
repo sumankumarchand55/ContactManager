@@ -143,15 +143,6 @@ spring.datasource.password=..
 
 <h1>Desktop View - Mannual Sign Up and Login</h1>
 
-![Screenshot 2024-10-23 121243](https://github.com/user-attachments/assets/4d283e3e-59fa-4612-b3d4-8079dfa6c38c)
-![Screenshot 2024-10-23 121303](https://github.com/user-attachments/assets/2a65b543-a908-4a61-95b6-f880d18f1919)
-![Screenshot 2024-10-23 121320](https://github.com/user-attachments/assets/64ea2fa3-4554-490a-952f-a6ccfa21b287)
-![Screenshot 2024-10-23 121402](https://github.com/user-attachments/assets/aea66155-06d9-4d7c-80f3-f93b11b04104)
-![Screenshot 2024-10-23 121508](https://github.com/user-attachments/assets/f51161f2-8be4-4aad-a8ac-880c39f89528)
-![Screenshot 2024-10-23 121542](https://github.com/user-attachments/assets/7a95b487-b7b2-42bf-876b-354021807a6a)
-![Screenshot 2024-10-23 121559](https://github.com/user-attachments/assets/ceee8c25-c973-4098-9ef3-77f80cb71cb1)
-
-
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/4d283e3e-59fa-4612-b3d4-8079dfa6c38c" width="800"/></td>
