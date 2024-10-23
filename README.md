@@ -15,14 +15,14 @@
   <li>Spring Boot</li>
   <li>Spring Data JPA</li>
   <li>Hibernate</li>
-  <li>Oracle DB</li>
+  <li>Oracle SQL DB</li>
 </ul>
-<h2>Other Knowldge</h2>
+<h2>Other Knowledge</h2>
 <ul>
   <li>Spring Tool Suite</li>
   <li>Mail SMTP</li>
   <li>Google Oauth</li>
-  <li>Html,css,Bootstrap & Javascript</li>
+  <li>HTML, CSS, Bootstrap & JavaScript</li>
   <li>Github</li>
 </ul>
 
@@ -141,7 +141,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Desktop View - Mannual Sign Up then Login</h1>
+<h1>Desktop View - Manual Sign Up then Login</h1>
 
 <table>
   <tr>
@@ -217,7 +217,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Mobile View - Mannual Sign Up then Login</h1>
+<h1>Mobile View - Manual Sign Up then Login</h1>
 
 <table>
   <tr>
