@@ -141,7 +141,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Desktop View - Mannual Sign Up and Login</h1>
+<h1>Desktop View - Mannual Sign Up then Login</h1>
 
 <table>
   <tr>
@@ -207,16 +207,31 @@ spring.datasource.password=..
 </table>
 
 
-<h1>Mobile View - Login & Signup</h1>
+<h1>Mobile View -  Direct Login Through Google</h1>
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/5e135d51-bcbe-41cb-8103-15d4ba3517e1" width="200"/></td>
     <td><img src="https://github.com/user-attachments/assets/b8d6fb57-0825-41b9-90c9-c4539b028940" width="200"/></td>
     <td><img src="https://github.com/user-attachments/assets/bc9dd3b7-241f-4623-8d6e-c025b340a3f7" width="200"/></td>
+   <td><img src="https://github.com/user-attachments/assets/e7bc9908-e2ff-474c-a708-2a5f08236fe9" width="200"/></td>
   </tr>
+</table>
+
+<h1>Mobile View - Mannual Sign Up then Login</h1>
+
+<table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/c6467750-535a-4ca4-bbac-00703c3ca820" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/570c6719-fe52-4fc5-82b7-4ed2bdd9d9df" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/febc05ca-613c-49d0-9525-f9805767bc27" width="200"/></td>
+   <td><img src="https://github.com/user-attachments/assets/97eef3f5-4d31-49c9-a9e2-bf66904dafcc" width="200"/></td>
+  </tr>
+   <tr>
+    <td><img src="https://github.com/user-attachments/assets/6c015ca0-e62d-429f-be47-8ab2f41c56c6" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/e4d703c9-19a2-4d34-88b8-823d2905b1e2" width="200"/></td>
+   <td><img src="https://github.com/user-attachments/assets/269873dd-f495-4742-b820-f3be0af9de11" width="200"/></td>
+  </tr>
+    <tr>
+   <td><img src="https://github.com/user-attachments/assets/8a02dd23-2dff-4599-9259-331874097766" width="200"/></td>
   </tr>
 </table>
 
@@ -246,6 +261,20 @@ spring.datasource.password=..
   </tr>
  <tr>
     <td><img src="https://github.com/user-attachments/assets/c504f304-153f-418f-9cbe-37cda9597d73" width="200"/></td>
+  </tr>
+</table>
+
+<h1>Mobile View - Forgot Account Password</h1>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/2c1f10e8-9050-4057-be31-6b5a15a6ebb9" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ccda78dc-bfc1-4fca-8f6f-4d57c202c144" width="200"/></td>
+   <td><img src="https://github.com/user-attachments/assets/5a8b268a-cdde-423a-ab95-285e76cf0b5f" width="200"/></td>
+  </tr>
+   <tr>
+    <td><img src="https://github.com/user-attachments/assets/45390821-6c16-483b-851c-a1b4202ae9c5" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/4b003cd9-0596-4ada-a505-371818ad26de" width="200"/></td>
   </tr>
 </table>
                       <h5 style="text-align: center; font-weight: bold; font-size: 1rem; margin: 0; padding: 10px 0;">
