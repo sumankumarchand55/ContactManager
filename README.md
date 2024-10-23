@@ -96,7 +96,7 @@ spring.datasource.password=..
 
 <h1>EXPLORE WEBSITE</h1>
 
-<h1>Screen Shots of Website Desktop View Before Login</h1>
+<h1>Desktop View - Before Login</h1>
 
 <table>
   <tr>
@@ -124,7 +124,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Screen Shots of Website Desktop View Login & Signup</h1>
+<h1>Desktop View - Login & Signup</h1>
 
 <table>
   <tr>
@@ -137,7 +137,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Screen Shots of Website Desktop View After Login</h1>
+<h1>Desktop View - After Login</h1>
 
 <table>
   <tr>
@@ -162,7 +162,7 @@ spring.datasource.password=..
   </tr>
 </table>
 
-<h1>Screen Shots of Website Mobile View Before Login</h1>
+<h1>Mobile View - Before Login</h1>
 
 <table>
   <tr>
@@ -183,7 +183,7 @@ spring.datasource.password=..
 </table>
 
 
-<h1>Screen Shots of Website Mobile View - Login & Signup</h1>
+<h1>Mobile View - Login & Signup</h1>
 
 <table>
   <tr>
@@ -197,7 +197,7 @@ spring.datasource.password=..
 </table>
 
 
-<h1>Screen Shots of Website Mobile View - After Login</h1>
+<h1>Mobile View - After Login</h1>
 
 <table>
   <tr>
