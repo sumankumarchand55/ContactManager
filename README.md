@@ -224,11 +224,15 @@ spring.datasource.password=..
     <td><img src="https://github.com/user-attachments/assets/c504f304-153f-418f-9cbe-37cda9597d73" width="200"/></td>
   </tr>
 </table>
+                      <h5 style="text-align: center; font-weight: bold; font-size: 1rem; margin: 0; padding: 10px 0;">
+                           ContactManager.fun © 2024 Copyright, All Rights Reserved
+                       </h5>
 
 
 
 
 
+                 
 
 
 
