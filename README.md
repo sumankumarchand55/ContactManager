@@ -100,24 +100,27 @@ spring.datasource.password=..
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/98fbbde8-2c3b-42a4-9159-fa3840be50d4" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/cbcf45d8-c9b7-46f3-aba2-81c9c0681f52" width="300"/></td>
-   <td><img src="https://github.com/user-attachments/assets/560c550d-988e-4558-86cb-b8b6584c68b2" width="300"/></td>
-
+    <td><img src="https://github.com/user-attachments/assets/98fbbde8-2c3b-42a4-9159-fa3840be50d4" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/cbcf45d8-c9b7-46f3-aba2-81c9c0681f52" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/00242097-221c-4b91-9b2f-c02bc69262dc" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/46008db9-6a43-4b8c-9583-f3befcf02c22" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/4e6b1136-4cea-41af-8ffc-15b10786f0ba" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/560c550d-988e-4558-86cb-b8b6584c68b2" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/00242097-221c-4b91-9b2f-c02bc69262dc" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/1e553e30-4f2f-482f-a247-081afcb053d2" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/bcab16c4-75fa-4df7-8e70-0960ff44007f" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/47d691e5-1ff0-40d7-bdf3-e46463a831c3" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/46008db9-6a43-4b8c-9583-f3befcf02c22" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/4e6b1136-4cea-41af-8ffc-15b10786f0ba" width="800"/></td>
   </tr>
   <tr>
-     <td><img src="https://github.com/user-attachments/assets/5795a605-c635-43d0-b56e-813fd7dcf159" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/1e553e30-4f2f-482f-a247-081afcb053d2" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/bcab16c4-75fa-4df7-8e70-0960ff44007f" width="800"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/47d691e5-1ff0-40d7-bdf3-e46463a831c3" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/5795a605-c635-43d0-b56e-813fd7dcf159" width="800"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067" width="1600"/></td>
   </tr>
 </table>
 
