@@ -272,6 +272,7 @@
 						</button>
 					</div>
 
+					<div th:if="${logedInUser.providerUserId == null}">
 					<div class="btn-group me-2">
 						<button type="button" class="btn btn-danger rounded"
 							th:data-id="${logedInUser.id}"
@@ -280,6 +281,8 @@
 							<i class="fas fa-ban fw-bold "></i> Disable User
 						</button>
 					</div>
+					</div>
+
 				</div>
 			</div>
 			<!-- Footer Section -->
