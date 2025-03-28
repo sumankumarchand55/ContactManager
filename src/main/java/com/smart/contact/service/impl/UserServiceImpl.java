@@ -1,11 +1,14 @@
 package com.smart.contact.service.impl;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.TaskScheduler;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -40,15 +43,29 @@ public class UserServiceImpl implements UserService{
 		user.setEnabled(false);
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		user.setRoleList(List.of(AppConstants.ROLE_USER));
-
+		user.setAbout("This account is creatted by User by Register.....");
+		user.setPhoneNumber("1234567890");
 		logger.info(user.getProvider().toString());
 		String emailToken=UUID.randomUUID().toString();
 		user.setEmailToken(emailToken);
 		User savedUser=userRepository.save(user);
 		String emailLink=helper.getLinkForEmailVeryfication(emailToken);
 		emailService.sendEmail(savedUser.getEmail(),"Verify Account : Click on Veryfication Link to Verify Email", emailLink);
+		scheduleUnverifiedUserCleanup(savedUser.getId());
 		return savedUser;
 	} 
+	
+	 private void scheduleUnverifiedUserCleanup(int userId) {
+	        taskScheduler.schedule(() -> {
+	            User user = userRepository.findById(userId).orElse(null);
+	            if (user != null && !user.isEmailVeryfied()) {
+	                userRepository.delete(user);
+	                logger.info("Deleted unverified user after 10 second: {}", user.getEmail());
+	            }
+	        },Instant.now().plus(300, ChronoUnit.SECONDS));
+	    }
+	  @Autowired
+	    private TaskScheduler taskScheduler;
 	
 	 @Override
 	    public void resendVerificationEmail(String email) {

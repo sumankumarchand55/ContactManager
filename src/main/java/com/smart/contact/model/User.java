@@ -62,15 +62,23 @@ public class User implements UserDetails{
 	private String password;
 	private boolean enabled=false;
 	private String imageUrl;
-	@Column(length = 500)
-	@NotBlank(message="description is required!!!")
-    @Size(min=10,message="description contain minimum 10 characters!!!")
+	/*
+	 * @Column(length = 500)
+	 * 
+	 * @NotBlank(message="description is required!!!")
+	 * 
+	 * @Size(min=10,message="description contain minimum 10 characters!!!")
+	 */
 	private String about;
 	private Date dob;
 	@AssertTrue(message="(please accept terms and conditions!!!!!)")
 	private boolean agreed;
-	@Pattern(regexp="^[0-9]{10}$", message="Phone number must be 10 digits long, Ex-1234567890")
-	@NotBlank(message="Phone number is required!!!")
+	/*
+	 * @Pattern(regexp="^[0-9]{10}$",
+	 * message="Phone number must be 10 digits long, Ex-1234567890")
+	 * 
+	 * @NotBlank(message="Phone number is required!!!")
+	 */
 	private String phoneNumber;
 	private boolean phoneVeryfied=false;
 	private boolean emailVeryfied=false;

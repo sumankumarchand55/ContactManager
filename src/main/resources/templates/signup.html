@@ -110,11 +110,11 @@
 								</div>
 							</div>
 
-							<div class="form-group">
+					<!-- 		<div class="form-group">
 								<label for="phone_number_field" class="form-label fw-bold">Enter
 									Your Phone Number*</label>
 								<div class="input-group">
-									<!-- Icon inside the input group -->
+									Icon inside the input group
 									<span class="input-group-text"> <i class="fas fa-phone"></i></span>
 									<input type="text" th:field="*{phoneNumber}"
 										class="form-control"
@@ -125,7 +125,7 @@
 										th:each="e : ${#fields.errors('phoneNumber')}" th:text="${e}"></div>
 								</div>
 							</div>
-
+ -->
 
 							<!-- Email Field  -->
 							<div class="from-group">
@@ -177,10 +177,10 @@
 							</div>
 
 							<!-- User About Field  -->
-							<div class="form-group">
+					<!-- 		<div class="form-group">
 								<label class="form-label fw-bold">Description*</label>
 								<div class="input-group">
-									<!-- Icon inside the input group -->
+									Icon inside the input group
 									<span class="input-group-text"> <i
 										class="fas fa-file-text"></i></span>
 									<textarea th:text="${user.about}" name="about"
@@ -191,7 +191,7 @@
 									<div class="invalid-feedback"
 										th:each="e : ${#fields.errors('about')}" th:text="${e}"></div>
 								</div>
-							</div>
+							</div> -->
 							<label></label>
 
 							<div class="form-group text-center">

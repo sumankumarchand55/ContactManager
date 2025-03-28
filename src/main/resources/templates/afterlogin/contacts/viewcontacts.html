@@ -4,19 +4,52 @@
 <head>
 <meta charset="UTF-8">
 <title>ViewContacts-ContactManager</title>
+    <style>
+         .contact-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .card-header {
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+        }
+        
+        .card-footer {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.5);
+        }
+        
+        .dropdown-menu {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+    
+    	<!-- <link th:href="@{/css/login/table.css}" rel="stylesheet"> -->
 </head>
 <body>
 	<section>
-		<link th:href="@{/css/login/table.css}" rel="stylesheet">
+	
 
 		<h2 class="text-center text-myblue">All Your Contacts</h2>
 		<p class="text-center text-myblue">List Of All Contacts.....</p>
 		<div class="container mt-3 col-md-15 bg-secondary rounded">
 			<label></label>
 			<!-- Search and filter functionalities -->
-
+<div class="container mt-3">
 			<div>
-
 				<form th:action="@{'/user/contacts/search'}">
 					<div class="row mb-4">
 						<div
@@ -93,17 +126,17 @@
 					class="text-red text-center bg-light">No contacts found add
 					new to see</h3>
 
-				<table th:if="${pageContact.totalElements>0}"
+
+    <!--        <table th:if="${pageContact.totalElements>0}"
 					class="table table-hover">
 					<thead class="table-light">
 						<tr>
-							<th style="padding-left: 110px;" class="text-service">Name</th>
-							<th style="padding-left: 48px;" class="text-service">Phone</th>
-							<th style="padding-left: 30px;" class="text-service">Last
-								Update</th>
-							<th style="padding-left: 0px;" class="text-service">Favorite</th>
-							<th style="padding-left: 8px;" class="text-service">View</th>
-							<th style="padding-left: 0px;" class="text-service">Action</th>
+							<th style="padding-left: 110px;">Name</th>
+							<th style="padding-left: 50px;">Phone</th>
+							<th style="padding-left: 30px;">Last Update</th>
+							<th style="padding-left: 0px;">Favorite</th>
+							<th style="padding-left: 8px;">View</th>
+							<th style="padding-left: 0px;">Action</th>
 						</tr>
 					</thead>
 					<tbody id="myTable">
@@ -116,7 +149,10 @@
 										onerror="this.onerror=null; this.src='/img/login/onerror.png';"
 										class="rounded-circle me-2" width="40" height="40">
 									<div>
-										<span class="fw-bold" th:text="*{firstName}"></span><br>
+										<span class="fw-bold"
+											th:text="*{firstName}"></span><br>
+										<i
+											class="fas fa-envelope text-red"></i>
 										<small class="text-muted" th:text="*{email}"> </small>
 									</div>
 								</div>
@@ -142,13 +178,9 @@
 							<td><i data-bs-toggle="modal" data-bs-target="#contactModal"
 								th:onclick="'loadContactdata('+*{id}+')'"
 								class="fas fa-eye fw-bold text-cm"></i></td>
+
+
 							<td>
-								<!-- <button type="button" data-bs-toggle="modal"
-									data-bs-target="#contactModal"
-									th:onclick="'loadContactdata(' + *{id} + ')'">
-									<i class="fas fa-eye fw-bold text-cm"></i>
-								</button>
-								 -->
 								<div class="dropdown dropup me-4">
 									<a href="#" class="text-dark" id="dropdownMenuButton"
 										data-bs-toggle="dropdown" aria-expanded="false"> <i
@@ -172,7 +204,79 @@
 							</td>
 						</tr>
 					</tbody>
-				</table>
+				</table> -->
+
+
+
+				<div th:if="${pageContact.totalElements>0}" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            <div th:each="c : ${pageContact.getContent()}" class="col">
+                <div class="card contact-card h-100 shadow-sm">
+                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img th:src="${c.image}" alt="Contact image"
+                                 class="rounded-circle me-2" 
+                                 width="40" height="40"
+                                 onerror="this.onerror=null; this.src='/img/login/onerror.png';">
+                            <h5 class="card-title mb-0" th:text="${c.firstName + ' ' + c.lastName}"></h5>
+                        </div>
+                        <i th:classappend="${c.favorite} ? 'fas fa-star text-warning' : 'far fa-star text-secondary'"
+                           style="cursor: pointer;"></i>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="contact-info">
+                            <p class="card-text text-muted mb-1">
+                                <i class="fas fa-envelope me-2"></i>
+                                <span th:text="${c.email}"></span>
+                            </p>
+                            <p class="card-text text-muted mb-1">
+                                <i class="fas fa-phone me-2"></i>
+                                <span th:text="${c.phone}"></span>
+                            </p>
+                            <small class="text-muted">
+                                <i class="fas fa-clock me-1"></i>
+                                <span th:text="${c.getFormattedUpdatedAt()}"></span>
+                            </small>
+                        </div>
+                    </div>
+                    
+                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                        <button class="btn btn-sm btn-outline-primary" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#contactModal"
+                                th:onclick="'loadContactdata(' + ${c.id} + ')'">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" 
+                                    type="button" 
+                                    data-bs-toggle="dropdown">
+                                Actions
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="text-dark">
+                                    <a class="dropdown-item text-success" 
+                                       data-bs-toggle="modal" 
+                                       data-bs-target="#updateContactModal"
+                                       th:onclick="'get_details(' + ${c.id} + ')'">
+                                        <i class="fas fa-edit me-2 text-success"></i>Edit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-danger" 
+                                       th:data-id="${c.id}"
+                                       th:data-first-name="${c.firstName}"
+                                       th:onclick="deleteContact(this.getAttribute('data-id'), this.getAttribute('data-first-name'))">
+                                        <i class="fas fa-trash-alt me-2"></i>Remove
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 			</div>
 
 			<div>
@@ -222,6 +326,8 @@
 					class="page-link  link-primary"
 					th:href="@{'/user/contacts?page='+${pageContact.number+1}}">Next</a></li>
 			</ul>
+			
+		</div>
 
 			<label></label>
 		</div>

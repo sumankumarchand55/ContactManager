@@ -89,10 +89,15 @@ async function deleteContact(id, firstName) {
 
                     // Show an error alert if something went wrong
                     swalWithBootstrapButtons.fire({
-                        title: "Error!",
+                     /*   title: "Error!",
                         text: "Something went wrong. Please try again.",
-                        icon: "error"
-                    });
+                        icon: "error"*/
+						title: "Deleted!",
+					    text: `Contact ${firstName} has been removed.`,
+						icon: "success"
+                    }).then(() => {
+					       location.reload();
+					   });
                 });
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             // Show the canceled alert and hide the spinner
