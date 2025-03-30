@@ -45,7 +45,7 @@
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-md-4 custom-container toplogin">
-					<div class="my-card mt-4 signuphover rounded top custom-card">
+					<div class="my-card mt-4 signuphover rounded top custom-card" style="background-color:RGB(29, 42, 53,0.7)">
 						<!-- Display Error message -->
 						<div th:if="${param.error}" th:switch="${param.error[0]}">
 							<div th:case="'disabled'"
@@ -81,7 +81,7 @@
 											style="width: 40px; margin-right: -8px;" class="fw-bold">
 										</a>
 										<h4 class="fw-bold mb-0 ms-2">
-											<span class="text-blue">Contact</span><span class="text-red">Manager</span>
+											<span class="text-success">Contact</span><span class="text-white">Manager</span>
 										</h4>
 									</div>
 								</div>
@@ -90,9 +90,9 @@
 
 
 
-						<div class="container text-center">
+					<!-- 	<div class="container text-center">
 							<img style="width: 40px" alt="" th:src="@{/img/registration.png}">
-						</div>
+						</div> -->
 						<h3 class="text-center text-service fw-bold">Sign in to
 							continue..</h3>
 
@@ -101,7 +101,7 @@
 							<!--  novalidate="novalidate" -->
 							<!-- UserName Field  -->
 							<div class="form-group">
-								<label for="email_field" class="form-label fw-bold">Enter
+								<label for="email_field" class="form-label fw-bold text-light">Enter
 									your Email*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -116,7 +116,7 @@
 
 							<!-- Password Field  -->
 							<div class="form-group">
-								<label for="password_field" class="form-label fw-bold">Enter
+								<label for="password_field" class="form-label fw-bold text-light">Enter
 									Password*</label>
 								<div class="input-group mb-2">
 									<span class="input-group-text"> <i class="fas fa-lock"></i></span>
@@ -128,7 +128,7 @@
 									</button>
 								</div>
 								<div class="text-end">
-									<a href="/auth/forgot-password" class="footer-link2 link-primary fw-bold text-primary">Forgot
+									<a href="/auth/forgot-password" class="footer-link2 link-primary fw-bold text-primary text-light">Forgot
 										Password?</a>
 								</div>
 							</div>
@@ -141,18 +141,18 @@
 							</div>
 
 						</form>
-						<h2 class="text-center fw-bold text-dark">OR</h2>
+						<h2 class="text-center fw-bold text-light">OR</h2>
 						<div class="social-buttons-container flex text-center mt-1">
 							<a href="oauth2/authorization/google"
 								class="login-with-google-btn fw-bold footer-link2"> Sign in
 								with Google </a>
 						</div>
 
-						<div class="text-center mt-4 fw-bold">
+						<div class="text-center mt-4 fw-bold text-light">
 							Don't have account? <a class="footer-link1" th:href="@{/signup}"
 								onclick="submitForm()">sign-up</a>
 						</div>
-						<div class="text-center mt-1 fw-bold">
+						<div class="text-center mt-1 fw-bold text-light">
 							OR Return <a class="footer-link1" th:href="@{/}">Home</a>
 						</div>
 					</div>

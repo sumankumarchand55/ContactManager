@@ -13,7 +13,7 @@
 		<div class="container">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-md-13">
-					<div class="my-card mt-3 signuphover rounded">
+					<div class="my-card mt-3 signuphover rounded" style="background-color:RGB(29, 42, 53,0.9)">
 						<div th:if="${message}" th:classappend="${message.type}"
 							class="alert alert-dismissible">
 							<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
@@ -24,8 +24,8 @@
 							<img style="width: 70px" alt=""
 								th:src="@{/img/login/newcontact.png}">
 						</div>
-						<h3 class="text-center">New Contact</h3>
-						<p class="text-muted">This Contact will going to store on
+						<h3 class="text-center text-white">New Contact</h3>
+						<p class="text-success">This Contact will going to store on
 							cloud, you can directly email this contact after successfully
 							save!!!</p>
 
@@ -33,7 +33,7 @@
 							th:object="${contactForm}" enctype="multipart/form-data">
 							<!-- First Name Field  -->
 							<div class="form-group">
-								<label for="first_name" class="form-label fw-bold">
+								<label for="first_name" class="form-label fw-bold text-white">
 									FirstName*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -49,7 +49,7 @@
 
 							<!-- Sur Name Field  -->
 							<div class="form-group">
-								<label for="last_name" class="form-label fw-bold">
+								<label for="last_name" class="form-label fw-bold text-white">
 									Surname*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -64,7 +64,7 @@
 							</div>
 
 							<div class="form-group">
-								<label for="contact_phno" class="form-label fw-bold">
+								<label for="contact_phno" class="form-label fw-bold text-white">
 									Phone*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -81,7 +81,7 @@
 
 							<!-- Email Field  -->
 							<div class="from-group">
-								<label for="contact_email" class="form-label fw-bold">
+								<label for="contact_email" class="form-label fw-bold text-white">
 									Email* </label>
 								<div class="input-group">
 									<span class="input-group-text"> <i
@@ -100,7 +100,7 @@
 							<label></label>
 
 							<div class="form-group">
-								<label for="image_upload" class="form-label fw-bold mb-0">Contact
+								<label for="image_upload" class="form-label fw-bold mb-0 text-white">Contact
 									Picture*</label>
 
 								<div class="input-group">
@@ -113,7 +113,7 @@
 										th:each="e : ${#fields.errors('contactImage')}" th:text="${e}"></div>
 							</div>
 
-							<small id="imageHelp" class="form-text mb-1 text-muted">(Please
+							<small id="imageHelp" class="form-text mb-1 text-success">(Please
 								upload a JPG or PNG)</small>
 
 							<!-- Profile image preview -->
@@ -127,7 +127,7 @@
 					<div class="form-check m-3">
 						<input type="checkbox" class="form-check-input" id="check2"
 							name="option2" th:field="*{favorite}"> <label
-							class="form-check-label" for="check2"> is this contact
+							class="form-check-label text-white" for="check2"> is this contact
 							your favorite one? </label>
 					</div>
 

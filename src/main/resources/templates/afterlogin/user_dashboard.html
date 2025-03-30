@@ -13,11 +13,11 @@
 			<div class="row">
 				<!-- Profile Card -->
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fas fa-home me-2 text-red fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">PROFILE</h5>
-							<p class="card-text">View and edit your profile
+							<p class="card-text text-white">View and edit your profile
 								informations......</p>
 							<a th:href="@{/user/profile}" class="btn btn-primary">Go to
 								Profile <i class="fa fa-angle-right"></i>
@@ -28,11 +28,11 @@
 
 				<!-- Contacts Card -->
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fas fa-address-book me-2 text-primary fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">CONTACTS</h5>
-							<p class="card-text">Manage your contacts , view and
+							<p class="card-text text-white">Manage your contacts , view and
 								edit......</p>
 							<a th:href="@{/user/contacts}" class="btn btn-primary">Go to
 								Contacts <i class="fa fa-angle-right"></i>
@@ -43,12 +43,12 @@
 
 				<!-- Favorite Contacts Card -->
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fa-solid fa-star me-2 text-warning fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">FAVORITE
 								CONTACTS</h5>
-							<p class="card-text">View your favorite contacts.......</p>
+							<p class="card-text text-white">View your favorite contacts.......</p>
 							<a th:href="@{/user/contacts/favorites}" class="btn btn-primary">Go
 								to Favorites <i class="fa fa-angle-right"></i>
 							</a>
@@ -58,12 +58,12 @@
 
 				<!-- Create New Contact Card -->
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fas fa-user-plus me-2 text-primary fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">CREATE NEW
 								CONTACT</h5>
-							<p class="card-text">Add a new contact on cloud......</p>
+							<p class="card-text text-white">Add a new contact on cloud......</p>
 							<a th:href="@{/user/contacts/add}" class="btn btn-primary">Create
 								Contact <i class="fa fa-angle-right"></i>
 							</a>
@@ -73,12 +73,12 @@
 
 				<!-- Update Password Card -->
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fas fa-lock me-2 text-success fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">UPDATE
 								PASSWORD</h5>
-							<p class="card-text">Change your existing user password...</p>
+							<p class="card-text text-white">Change your existing user password...</p>
 							<div th:if="${logedInUser.providerUserId == null}">
 								<!-- Button for manual signup users -->
 								<a th:href="@{#}" data-bs-toggle="modal"
@@ -101,12 +101,12 @@
 				</div>
 
 				<div class="col-md-4 mt-4">
-					<div class="card text-center shadow-sm">
+					<div class="card text-center shadow-sm" style="background-color:RGB(29, 42, 53,0.9)">
 						<div class="card-body">
 							<i class="fa fa-cogs me-2 text-secondary fa-3x"></i>
 							<h5 class="card-title mt-3 fw-bold text-service">APPLY
 								SERVICES</h5>
-							<p class="card-text">Apply various services provide by
+							<p class="card-text text-white">Apply various services provide by
 								us......</p>
 							<a th:href="@{https://edistrict.odisha.gov.in/}"
 								class="btn btn-primary">Apply Services <i

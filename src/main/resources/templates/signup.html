@@ -52,7 +52,7 @@
 		<div class="container" style="margin-top: 0px;">
 			<div class="row justify-content-center align-items-center">
 				<div class="col-md-6 custom-container rounded ">
-					<div class="my-card mt-4 signuphover rounded top custom-card">
+					<div class="my-card mt-4 signuphover rounded top custom-card"  style="background-color:RGB(29, 42, 53,0.7)">
 						<!-- Display flash message -->
 						<div th:if="${message}" th:classappend="${message.type}"
 							class="alert alert-dismissible">
@@ -96,7 +96,7 @@
 
 							<!-- Name Field  -->
 							<div class="form-group">
-								<label for="name_field" class="form-label fw-bold">Enter
+								<label for="name_field" class="form-label fw-bold text-white">Enter
 									Your Name*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -129,7 +129,7 @@
 
 							<!-- Email Field  -->
 							<div class="from-group">
-								<label for="email_field" class="form-label fw-bold">Enter
+								<label for="email_field" class="form-label fw-bold text-white">Enter
 									Your Email*</label>
 								<div class="input-group">
 									<!-- Icon inside the input group -->
@@ -147,7 +147,7 @@
 
 
 							<div class="form-group">
-								<label for="password_field" class="form-label fw-bold">Enter
+								<label for="password_field" class="form-label fw-bold text-white">Enter
 									Password*</label>
 								<div class="input-group">
 									<span class="input-group-text"> <i class="fas fa-lock"></i></span>
@@ -166,7 +166,7 @@
 
 							<!-- Add Confirm Password Field -->
 							<div class="form-group mt-2">
-								<label for="confirm_password_field" class="form-label fw-bold">Confirm
+								<label for="confirm_password_field" class="form-label fw-bold text-white">Confirm
 									Password*</label>
 								<div class="input-group">
 									<span class="input-group-text"> <i class="fas fa-lock"></i></span>
@@ -198,7 +198,7 @@
 								<div class="form-check d-inline-block">
 									<input type="checkbox" name="agreed" class="form-check-input"
 										th:classappend="${#fields.hasErrors('agreed') ? 'is-invalid' : ''}"
-										id="agreed" /> <label for="agreed" class="form-check-label">Accept
+										id="agreed" /> <label for="agreed" class="form-check-label text-white">Accept
 										Terms And Conditions</label> <span class="text-danger ms-2"
 										th:if="${#fields.hasErrors('agreed')}"
 										th:text="${#fields.errors('agreed')[0]}"></span>
@@ -212,7 +212,7 @@
 								<button type="reset" class="btn btn-danger">Reset</button>
 							</div>
 						</form>
-						<h2 class="text-center fw-bold text-dark">OR</h2>
+						<h2 class="text-center fw-bold text-white">OR</h2>
 
 						<div class="social-buttons-container flex text-center mt-1">
 							<a href="oauth2/authorization/google"
@@ -220,11 +220,11 @@
 								with Google </a>
 						</div>
 
-						<div class="text-center mt-4 fw-bold">
+						<div class="text-center mt-4 fw-bold text-white">
 							Already have a account? <a class="footer-link1"
 								th:href="@{/user/profile}" onclick="submitForm()"> Sign in</a>
 						</div>
-						<div class="text-center fw-bold">
+						<div class="text-center fw-bold text-white">
 							OR Return <a class="footer-link1" th:href="@{/}">Home</a>
 						</div>
 					</div>

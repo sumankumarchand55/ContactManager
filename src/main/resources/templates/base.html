@@ -57,7 +57,11 @@
 	</div>
 
 	<!-- FAQ Fragment: Displays when either home or service page is active -->
-	<div th:if="${isHomePage} or ${isServicePage}">
+<!-- 	<div th:if="${isHomePage} or ${isServicePage}">
+		<div th:replace="~{/fragments/faqfragment :: faqfragment}"></div>
+	</div> -->
+	
+	<div th:if="${isHomePage}">
 		<div th:replace="~{/fragments/faqfragment :: faqfragment}"></div>
 	</div>
 
