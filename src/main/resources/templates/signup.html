@@ -22,10 +22,19 @@
 </head>
 <style>
 .mybody {
-	background-image: url('img/signupbg.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+    background-image: url('img/signupbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* Fix for mobile */
+@media (max-width: 768px) {
+    .mybody {
+        background-size: cover; /* Ensures the image stays fully visible */
+        background-position: center top;
+        height: 104vh;
+    }
 }
 
 @media ( max-width : 767px) {
@@ -44,7 +53,7 @@
 
 <body>
 	<!-- replacement of navigation bar from fragment constant-->
-	<div th:replace="~{/fragments/navigationbar :: navigationbar}"></div>
+	<!-- <div th:replace="~{/fragments/navigationbar :: navigationbar}"></div> -->
 
 	<div data-th-replace="~{/fragments/afterlogin/spinner :: spinner}"></div>
 

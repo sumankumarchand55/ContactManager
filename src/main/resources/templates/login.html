@@ -21,9 +21,9 @@
 	background-image: url('img/signupbg.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	min-height: 100vh;
+	 min-height: 100vh;
 }
+
 
 @media ( max-width : 767px) {
 	.vertical-links {
@@ -33,7 +33,9 @@
 		max-height: 100px;
 	}
 	.mybody {
-		min-height: 106vh;
+		  background-size: cover; /* Ensures the image stays fully visible */
+        background-position: center top;
+        height: 104vh;
 	}
 }
 </style>
