@@ -9,10 +9,7 @@ WORKDIR /app
 COPY . .
 
 # Run Maven build
-# RUN mvn clean package 
-
-# Run Maven build (skip tests to speed up)
-RUN mvn clean package -DskipTests  
+RUN mvn clean package 
 
 # Run stage
 FROM openjdk:17-jdk-slim
