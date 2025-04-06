@@ -116,10 +116,6 @@ spring.datasource.password=..
   </tr>
 </table>
 
-![1](https://github.com/user-attachments/assets/9d0fab08-a5cf-45c6-a2c6-38f0f099623c)
-![2](https://github.com/user-attachments/assets/a4f412b1-483b-480b-84d0-c022f1120ff6)
-![3](https://github.com/user-attachments/assets/2ce2e27a-ad4c-4a96-9bbe-66a3fe0d6a14)
-
 
 <h1>Desktop View - Sign Up then Login</h1>
 
