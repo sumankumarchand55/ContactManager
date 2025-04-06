@@ -179,10 +179,10 @@
 					</tbody>
 				</table> -->
 				
-				     	<div th:if="${pageContact.totalElements>0}" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+				     					<div th:if="${pageContact.totalElements>0}" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
             <div th:each="c : ${pageContact.getContent()}" class="col">
-                <div class="card contact-card h-100 shadow-sm">
-                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                <div class="card contact-card h-100 shadow-sm text-light" >
+                    <div class="card-header d-flex justify-content-between align-items-center" style="background-color: RGB(29, 42, 53,0.9)">
                         <div class="d-flex align-items-center">
                             <img th:src="${c.image}" alt="Contact image"
                                  class="rounded-circle me-2" 
@@ -194,24 +194,24 @@
                            style="cursor: pointer;"></i>
                     </div>
                     
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: RGB(29, 42, 53,0.9)">
                         <div class="contact-info">
-                            <p class="card-text text-muted mb-1">
+                           <!--  <p class="card-text text-muted mb-1">
                                 <i class="fas fa-envelope me-2"></i>
                                 <span th:text="${c.email}"></span>
-                            </p>
-                            <p class="card-text text-muted mb-1">
+                            </p> -->
+                            <p class="card-text text-light mb-1">
                                 <i class="fas fa-phone me-2"></i>
                                 <span th:text="${c.phone}"></span>
                             </p>
-                            <small class="text-muted">
+                            <small class="text-light">
                                 <i class="fas fa-clock me-1"></i>
                                 <span th:text="${c.getFormattedUpdatedAt()}"></span>
                             </small>
                         </div>
                     </div>
                     
-                    <div class="card-footer bg-transparent d-flex justify-content-between">
+                    <div class="card-footer d-flex justify-content-between" style="background-color: RGB(29, 42, 53,0.9)">
                         <button class="btn btn-sm btn-outline-primary" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#contactModal"
@@ -226,8 +226,8 @@
                                 Actions
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li class="text-dark">
-                                    <a class="dropdown-item text-success" 
+                                <li class="text-dark" style="cursor: pointer;">
+                                    <a class="dropdown-item text-success" style="cursor: pointer;"
                                        data-bs-toggle="modal" 
                                        data-bs-target="#updateContactModal"
                                        th:onclick="'get_details(' + ${c.id} + ')'">
@@ -235,7 +235,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item text-danger" 
+                                    <a class="dropdown-item text-danger" style="cursor: pointer;"
                                        th:data-id="${c.id}"
                                        th:data-first-name="${c.firstName}"
                                        th:onclick="deleteContact(this.getAttribute('data-id'), this.getAttribute('data-first-name'))">
