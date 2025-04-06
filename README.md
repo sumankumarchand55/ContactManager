@@ -156,7 +156,7 @@ spring.datasource.password=..
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/50fa8650-c50f-4349-b3de-313f82052e2f" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/50fa8650-c50f-4349-b3de-313f82052e2f" width="1500"/></td>
     <td><img src="https://github.com/user-attachments/assets/16b96cd5-83a9-45d0-9346-6af933eea146" width="800"/></td>
     <td><img src="https://github.com/user-attachments/assets/ff778724-0c22-4200-86b1-2b7f2cc62bea" width="800"/></td>
   </tr>
