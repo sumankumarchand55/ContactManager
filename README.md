@@ -157,11 +157,11 @@ spring.datasource.password=..
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/50fa8650-c50f-4349-b3de-313f82052e2f" width="1500"/></td>
-    <td><img src="https://github.com/user-attachments/assets/16b96cd5-83a9-45d0-9346-6af933eea146" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/ff778724-0c22-4200-86b1-2b7f2cc62bea" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/16b96cd5-83a9-45d0-9346-6af933eea146" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ff778724-0c22-4200-86b1-2b7f2cc62bea" width="1500"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/db9f98c0-0107-4049-ae9a-ac867d49ad3f" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/db9f98c0-0107-4049-ae9a-ac867d49ad3f" width="1500"/></td>
   </tr>
 </table>
 
@@ -170,32 +170,32 @@ spring.datasource.password=..
 
 <table>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/7e01e239-b5ff-497d-9799-643a936d4bdf" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/c92cf324-015b-4e9c-a14d-d98795591ae4" width="800"/></td>
-   <td><img src="https://github.com/user-attachments/assets/72c36391-23de-4109-9931-07c1a3e783c8" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7e01e239-b5ff-497d-9799-643a936d4bdf" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/c92cf324-015b-4e9c-a14d-d98795591ae4" width="1500"/></td>
+   <td><img src="https://github.com/user-attachments/assets/72c36391-23de-4109-9931-07c1a3e783c8" width="1500"/></td>
   </tr>
 </table>
 
 <h1>Mobile View - After Login</h1>
 <table>
   <tr>
-   <td><img src="https://github.com/user-attachments/assets/36fef6a9-c9e4-4a29-aa5e-3b58e2ccf86a" width="800"/></td>
-  <td><img src="https://github.com/user-attachments/assets/e80cfa24-ab71-4548-a3a7-244e71a77a9a" width="800"/></td>
-   <td><img src="https://github.com/user-attachments/assets/0600e2dc-e729-4688-b9eb-898bd37408fe" width="800"/></td>
+   <td><img src="https://github.com/user-attachments/assets/36fef6a9-c9e4-4a29-aa5e-3b58e2ccf86a" width="1500"/></td>
+  <td><img src="https://github.com/user-attachments/assets/e80cfa24-ab71-4548-a3a7-244e71a77a9a" width="1500"/></td>
+   <td><img src="https://github.com/user-attachments/assets/0600e2dc-e729-4688-b9eb-898bd37408fe" width="1500"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/aa6ef381-802a-48da-bd45-42e14c1a4be1" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/23dc80c1-bffe-4167-8358-fa7bd7707388" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/5226e6fc-c172-4161-abe0-25310d15cd3b" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/aa6ef381-802a-48da-bd45-42e14c1a4be1" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/23dc80c1-bffe-4167-8358-fa7bd7707388" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/5226e6fc-c172-4161-abe0-25310d15cd3b" width="1500"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/77a97b9a-ab27-4be7-a171-64e5dc113e8a" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/3fbdb807-e2fa-4a0e-8d03-b697f728ac61" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/ee04332a-9efa-4011-81e7-9bef570ccd53" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/77a97b9a-ab27-4be7-a171-64e5dc113e8a" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/3fbdb807-e2fa-4a0e-8d03-b697f728ac61" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ee04332a-9efa-4011-81e7-9bef570ccd53" width="1500"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/ca0efe58-889a-4892-8fc1-2a042947686f" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/7bc96aec-d355-40c3-afe9-2cec080fc001" width="800"/></td>
+    <td><img src="https://github.com/user-attachments/assets/ca0efe58-889a-4892-8fc1-2a042947686f" width="1500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7bc96aec-d355-40c3-afe9-2cec080fc001" width="1500"/></td>
   </tr>
 </table>
 
@@ -203,13 +203,13 @@ spring.datasource.password=..
 
 <table>
   <tr>
-   <td><img src="https://github.com/user-attachments/assets/5a8b268a-cdde-423a-ab95-285e76cf0b5f" width="300"/></td>
- <td><img src="https://github.com/user-attachments/assets/ccda78dc-bfc1-4fca-8f6f-4d57c202c144" width="300"/></td>
-<td><img src="https://github.com/user-attachments/assets/2c1f10e8-9050-4057-be31-6b5a15a6ebb9" width="300"/></td>
+   <td><img src="https://github.com/user-attachments/assets/5a8b268a-cdde-423a-ab95-285e76cf0b5f" width="500"/></td>
+ <td><img src="https://github.com/user-attachments/assets/ccda78dc-bfc1-4fca-8f6f-4d57c202c144" width="500"/></td>
+<td><img src="https://github.com/user-attachments/assets/2c1f10e8-9050-4057-be31-6b5a15a6ebb9" width="500"/></td>
   </tr>
    <tr>
-    <td><img src="https://github.com/user-attachments/assets/45390821-6c16-483b-851c-a1b4202ae9c5" width="300"/></td>
-    <td><img src="https://github.com/user-attachments/assets/4b003cd9-0596-4ada-a505-371818ad26de" width="300"/></td>
+    <td><img src="https://github.com/user-attachments/assets/45390821-6c16-483b-851c-a1b4202ae9c5" width="500"/></td>
+    <td><img src="https://github.com/user-attachments/assets/4b003cd9-0596-4ada-a505-371818ad26de" width="500"/></td>
   </tr>
 </table>
                       <h5 style="text-align: center; font-weight: bold; font-size: 1rem; margin: 0; padding: 10px 0;">
