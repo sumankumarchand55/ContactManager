@@ -111,30 +111,28 @@ spring.datasource.password=..
     <td><img src="https://github.com/user-attachments/assets/2f0a9d83-d883-45b1-bafc-4940d7d63956" width="800"/></td>
     <td><img src="https://github.com/user-attachments/assets/eb8a76ed-5424-4ccd-b5d3-a3d8555ad0fe" width="800"/></td>
   </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/97bed7c2-c6e5-4b24-932d-c6fa318be067" width="800"/></td>
-  </tr>
 </table>
 
 
-<h1>Desktop View - Sign Up then Login</h1>
+<h1>Desktop View - Sign Up then Login and sign-in with google</h1>
 
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/9d0fab08-a5cf-45c6-a2c6-38f0f099623c" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/a4f412b1-483b-480b-84d0-c022f1120ff6" width="800"/></td>
+  <td><img src="https://github.com/user-attachments/assets/2a65b543-a908-4a61-95b6-f880d18f1919" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/2ce2e27a-ad4c-4a96-9bbe-66a3fe0d6a14" width="800"/></td>
-    <td><img src="https://github.com/user-attachments/assets/2a65b543-a908-4a61-95b6-f880d18f1919" width="800"/></td>
-  </tr>
-    <tr>
     <td><img src="https://github.com/user-attachments/assets/64ea2fa3-4554-490a-952f-a6ccfa21b287" width="800"/></td>
     <td><img src="https://github.com/user-attachments/assets/aea66155-06d9-4d7c-80f3-f93b11b04104" width="800"/></td>
+   
+  </tr>
+   <td><img src="https://github.com/user-attachments/assets/a4f412b1-483b-480b-84d0-c022f1120ff6" width="800"/></td>
+   <td><img src="https://github.com/user-attachments/assets/2ce2e27a-ad4c-4a96-9bbe-66a3fe0d6a14" width="800"/></td>
+    <tr>
+ 
   </tr>
 </table>
-
-
+  
 <h1>Desktop View - After Login</h1>
 
 <table>
@@ -166,11 +164,14 @@ spring.datasource.password=..
 </table>
 
 
-<h1>Mobile View - Sign Up then Login</h1>
+<h1>Mobile View - Sign Up then Login and sign-in with google</h1>
 
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/7e01e239-b5ff-497d-9799-643a936d4bdf" class="img-fluid"/></td>
+  </tr>
+</table>
+  <tr>
     <td><img src="https://github.com/user-attachments/assets/c92cf324-015b-4e9c-a14d-d98795591ae4" class="img-fluid"/></td>
   </tr>
 </table>
@@ -181,31 +182,76 @@ spring.datasource.password=..
 </table>
 
 <h1>Mobile View - After Login</h1>
+<!-- First Table with <i> content (just text) -->
 <table>
   <tr>
-   <td><img src="https://github.com/user-attachments/assets/36fef6a9-c9e4-4a29-aa5e-3b58e2ccf86a" class="img-fluid"/></td>
-  <td><img src="https://github.com/user-attachments/assets/e80cfa24-ab71-4548-a3a7-244e71a77a9a" class="img-fluid"/></td>
-  </tr>
-    <tr>
-   <td><img src="https://github.com/user-attachments/assets/0600e2dc-e729-4688-b9eb-898bd37408fe" class="img-fluid"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/aa6ef381-802a-48da-bd45-42e14c1a4be1" class="img-fluid"/></td>
-    <td><img src="https://github.com/user-attachments/assets/23dc80c1-bffe-4167-8358-fa7bd7707388" class="img-fluid"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/5226e6fc-c172-4161-abe0-25310d15cd3b" class="img-fluid"/></td>
-    <td><img src="https://github.com/user-attachments/assets/77a97b9a-ab27-4be7-a171-64e5dc113e8a" class="img-fluid"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/3fbdb807-e2fa-4a0e-8d03-b697f728ac61" class="img-fluid"/></td>
-    <td><img src="https://github.com/user-attachments/assets/ee04332a-9efa-4011-81e7-9bef570ccd53" class="img-fluid"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/ca0efe58-889a-4892-8fc1-2a042947686f" class="img-fluid"/></td>
-    <td><img src="https://github.com/user-attachments/assets/7bc96aec-d355-40c3-afe9-2cec080fc001" class="img-fluid"/></td>
+    <td>
+      <img src="https://github.com/user-attachments/assets/36fef6a9-c9e4-4a29-aa5e-3b58e2ccf86a" class="img-fluid" />
+    </td>
   </tr>
 </table>
+
+<!-- Separate tables for remaining images -->
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/e80cfa24-ab71-4548-a3a7-244e71a77a9a" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/0600e2dc-e729-4688-b9eb-898bd37408fe" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/aa6ef381-802a-48da-bd45-42e14c1a4be1" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/23dc80c1-bffe-4167-8358-fa7bd7707388" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/5226e6fc-c172-4161-abe0-25310d15cd3b" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/77a97b9a-ab27-4be7-a171-64e5dc113e8a" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/3fbdb807-e2fa-4a0e-8d03-b697f728ac61" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/ee04332a-9efa-4011-81e7-9bef570ccd53" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/ca0efe58-889a-4892-8fc1-2a042947686f" class="img-fluid" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/7bc96aec-d355-40c3-afe9-2cec080fc001" class="img-fluid" /></td>
+  </tr>
+</table>
+
 
 <h1>Mobile View - Forgot Account Password</h1>
 
