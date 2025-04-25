@@ -166,6 +166,8 @@ spring.datasource.password=..
   </tr>
 </table>
 
+<h1>Mobile View - register and Login or continue with google</h1>
+
 <table>
 
    <tr>
